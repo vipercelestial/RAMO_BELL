@@ -1,0 +1,526 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>BASIC EDUCATION ENROLLMENT FORM</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .form_wrapper {
+            --bg: #FFFFFF;
+            --text: #111;
+            --accent: #0066cc;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            max-width: 70ch;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .form_wrapper h1, .form_wrapper h2, .form_wrapper h3 {
+            color: var(--accent);
+            line-height: 1.2;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration-thickness: 2px;
+        }
+
+        img {
+            width: 100%;
+        }
+        
+        .text_ins {
+            font-weight: 200;
+            font-size: 12px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .SySt {
+            font-weight: 200;
+            font-size: 10px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .b1 {
+            display: flex;
+            font-weight: 200;
+            font-size: 10px;
+            width: 100%;
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        .toenroll {
+            width: 55%;
+            padding-right: 20px;
+        }
+
+        .Oenroll {
+            width: 45%;
+        }
+
+        .psa_section {
+            font-weight: 200;
+            font-size: 10px;
+            text-align: left;
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            padding: 5px;
+        }
+
+        .b2 {
+            font-weight: 200;
+            font-size: 10px;
+            text-align: left;
+            width: 100%;
+            display: flex; 
+            padding: 5px;
+        }
+
+        .name {
+            width: 60%;
+        }
+
+        .inputs {
+            width: 100%; 
+            margin-bottom: 8px;
+        }
+
+        .info1 {
+            width: 40%;
+            padding-left: 15px; 
+        }
+
+        .age_sex_row {
+            display: flex;
+            gap: 15px;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .sex_options {
+            border: 1px solid var(--text);
+            padding: 2px 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 8px;
+        }
+
+        .Tableform table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 10px;
+            text-align: left;
+        }
+
+        .Tableform td {
+            border: 1px solid gray;
+            padding: 4px;
+            vertical-align: top;
+        }
+        
+        .Tableform td, .Tableform th  {
+            border: 1px solid gray;
+            padding: 4px;
+        }
+        
+        .Tableform label {
+            display: block;
+            font-size: 10px;
+            color: #111;
+        }
+
+        .table_input {
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 11px;
+            font-family: inherit;
+            background: transparent;
+            padding: 2px 0;
+            /* Added cursor style for dropdowns */
+            cursor: pointer;
+        }
+
+        .wrapper {
+            width: 95%;
+            height: 100%;
+        }
+
+        
+    </style>    
+</head>
+<body>
+    <center>
+    <form>
+        <div class="form_wrapper">
+    <img src="Resource/topoverview.png" alt="">
+
+            <div class="text_ins">
+                <p>
+                    <i><b style="font-weight: 600;">Instructions:</b> Print legibly all information required in CAPITAL letters and check all appropriate boxes. Submit accomplished form to the Person-in-Charge/Registrar/Class Adviser. Use black or blue pen only</i>
+                </p>
+            </div>
+            
+            <div class="wrapper">
+                <div class="SySt">
+                    <div class="school_year">
+                        <label for="Sy" style="font-weight: 300; color:rgb(41, 40, 40);">1. School Year</label>
+                        <br>
+                        <input type="text" pattern="[0-9]{4}" max="4" name="Sy" id="Sy" style="width: 40px;"> - <input type="text" pattern="[0-9]{4}" max="4" name="Sy2" id="Sy2" style="width: 40px;">
+                    </div>
+                    <div class="LRN">
+                        <label for="lrn" style="font-weight: 300; color:rgb(41, 40, 40);">Learner Reference No. (LRN), if applicable:</label>
+                        <br>
+                        <input type="text" name="lrn" id="lrn" pattern="[0-9]{12}" required>
+                    </div>
+                </div>
+
+                <div class="b1">
+                    <div class="toenroll">
+                        <label for="enroll">2. Grade Level to Enroll:</label>
+                        <br>
+                        <input type="checkbox">Graded, specify Grade Level
+                        <input type="text" style="width: 40px;">
+                        <br>
+                        <input type="checkbox">
+                        <label>Non-Graded (For Special Needs Education (SNEd) Only)</label>
+                    </div>
+                    <div class="Oenroll">
+                        <label for="Oenroll">For Kindergarten Enrollees:</label>
+                        <br>
+                        <input type="checkbox">
+                        <label>Does the learner have attended any Early Learning Program? If yes, please specify:</label>
+                        <input type="text" style="width: 100%;">
+                    </div>
+                </div>
+
+                <div class="psa_section">
+                    <label for="psa_cert_no">PSA Birth Certificate No. (If available upon registration)</label>
+                    <br>
+                    <input type="text" name="psa_cert_no" id="psa_cert_no" style="width: 100%; max-width: 400px;">
+                </div>
+
+                <div class="b2">
+                    <div class="name">
+                        <label for="Lname">Last Name:</label>
+                        <br>
+                        <input type="text" name="Lname" id="Lname" class="inputs">
+                        
+                        <label for="Fname">First Name:</label>
+                        <br>
+                        <input type="text" name="Fname" id="Fname" class="inputs">
+                        
+                        <label for="Mname">Middle Name:</label>
+                        <br>
+                        <input type="text" name="Mname" id="Mname" class="inputs">
+
+                        <label for="ext">Extension Name e.g. Jr., III (If applicable)</label>
+                        <br>
+                        <input type="text" name="ext" id="ext" class="inputs" style="width: 100px;">
+
+                        <label for="CCC">Belonging to any Indigenous Peoples (IP) Community/Indigenous Cultural Community?</label>
+                        <br>
+                        <input type="checkbox" name="CCC1" id="CCC1">
+                        <label for="CCC1">yes</label>
+                        <input type="checkbox" name="CCC2" id="CCC2">
+                        <label for="CCC2">no</label>
+                        <br>
+                        <label for="CCC3">If yes, please specify:</label>
+                        <input type="text" name="CCC3" id="CCC3" class="inputs" style="width: 140px;">
+
+                        <label for="4Ps">Is your family a beneficiary of 4Ps?</label>
+                        <br>
+                        <input type="checkbox" name="4Ps1" id="4Ps1">
+                        <label for="4Ps1">yes</label>
+                        <input type="checkbox" name="4Ps2" id="4Ps2">
+                        <label for="4Ps2">no</label>
+                        
+                        <div class="HIdNo" style="margin-left: 8px;">
+                            <label for="HIdNo">If Yes, please write the 4Ps Household ID Number</label>
+                            <input type="text" name="HIdNo" id="HIdNo" class="inputs">
+                        </div>
+                    </div>
+
+                    <div class="info1">
+                        <label for="Bday">Birthdate(mm/dd/yyyy)</label>
+                        <br>
+                        <input type="date" name="Bday" id="Bday" class="inputs">
+                        
+                        <div class="age_sex_row">
+                            <div>
+                                <label for="Age">Age</label>
+                                <br>
+                                <input type="text" name="Age" id="Age" class="inputs" style="width: 50px;">
+                            </div>
+                            <div>
+                                <label>Sex</label>
+                                <br>
+                                <div class="sex_options">
+                                    <input type="checkbox" name="SexM" id="SexM">
+                                    <label for="SexM">Male</label>
+                                    <input type="checkbox" name="SexF" id="SexF">
+                                    <label for="SexF">Female</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 10px;">
+                            <label for="POB">Place of Birth (Municipality/City)</label>
+                            <input type="text" name="POB" id="POB" class="inputs">
+
+                            <label for="Religion">Religion</label>
+                            <input type="text" name="Religion" id="Religion" class="inputs">
+
+                            <label for="MotherTongue">Mother Tongue</label>
+                            <input type="text" name="MotherTongue" id="MotherTongue" class="inputs">
+                        </div>
+                    </div>
+                </div>            
+                <div class="Tableform">
+                <label style="text-align: left;">Current Address</label>
+                    <table>
+                        <tr>
+                            <td colspan="3">
+                                <label for="curr_house_no">House No.</label>
+                                <input type="text" id="curr_house_no" name="curr_house_no" class="table_input">
+                            </td>
+                            <td colspan="5">
+                                <label for="curr_street">Sitio/Street Name</label>
+                                <input type="text" id="curr_street" name="curr_street" class="table_input">
+                            </td>
+                            <td colspan="4">
+                                <label for="curr_barangay">Barangay</label>
+                                <input type="text" id="curr_barangay" name="curr_barangay" class="table_input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <label for="curr_muni">Municipality/City</label>
+                                <select id="curr_muni" name="curr_muni" class="table_input">
+                                    <option value="" disabled selected>Select City</option>
+                                    <option value="Quezon City">Quezon City</option>
+                                    <option value="Manila">Manila</option>
+                                    <option value="Makati City">Makati City</option>
+                                    <option value="Pasig City">Pasig City</option>
+                                    <option value="Caloocan City">Caloocan City</option>
+                                    <option value="Taguig City">Taguig City</option>
+                                    <option value="Cebu City">Cebu City</option>
+                                    <option value="Davao City">Davao City</option>
+                                    <option value="Others">Others (Please specify)</option>
+                                </select>
+                            </td>
+                            <td colspan="3">
+                                <label for="curr_province">Province</label>
+                                <select id="curr_province" name="curr_province" class="table_input">
+                                    <option value="" disabled selected>Select Province</option>
+                                    <option value="Metro Manila">Metro Manila (NCR)</option>
+                                    <option value="Bulacan">Bulacan</option>
+                                    <option value="Cavite">Cavite</option>
+                                    <option value="Laguna">Laguna</option>
+                                    <option value="Rizal">Rizal</option>
+                                    <option value="Cebu">Cebu</option>
+                                    <option value="Davao del Sur">Davao del Sur</option>
+                                    <option value="Others">Others (Please specify)</option>
+                                </select>
+                            </td>
+                            <td colspan="4">
+                                <label for="curr_country">Country</label>
+                                <select id="curr_country" name="curr_country" class="table_input">
+                                    <option value="Philippines" selected>Philippines</option>
+                                    <option value="United States">United States</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                <label for="curr_zip">Zip Code</label>
+                                <select id="curr_zip" name="curr_zip" class="table_input">
+                                    <option value="" disabled selected>Select Zip</option>
+                                    <option value="1100">1100 (QC)</option>
+                                    <option value="1000">1000 (Manila)</option>
+                                    <option value="1200">1200 (Makati)</option>
+                                    <option value="1600">1600 (Pasig)</option>
+                                    <option value="1400">1400 (Caloocan)</option>
+                                    <option value="6000">6000 (Cebu)</option>
+                                    <option value="8000">8000 (Davao)</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="12">
+                                <span style="font-weight: 500;">Permanent Address</span>
+                                <span style="margin-left: 20px;">Same with your Current Address?</span>
+                                <input type="checkbox" id="same_addr_yes" name="same_addr_yes" style="margin-left: 5px;">
+                                <label for="same_addr_yes" style="display: inline;">Yes</label>
+                                <input type="checkbox" id="same_addr_no" name="same_addr_no" style="margin-left: 5px;">
+                                <label for="same_addr_no" style="display: inline;">No</label>
+                                <span style="margin-left: 10px;">If Yes, proceed to item 4</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <label for="perm_house_no">House No.</label>
+                                <input type="text" id="perm_house_no" name="perm_house_no" class="table_input">
+                            </td>
+                            <td colspan="5">
+                                <label for="perm_street">Sitio/Street Name</label>
+                                <input type="text" id="perm_street" name="perm_street" class="table_input">
+                            </td>
+                            <td colspan="4">
+                                <label for="perm_barangay">Barangay</label>
+                                <input type="text" id="perm_barangay" name="perm_barangay" class="table_input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <label for="perm_muni">Municipality/City</label>
+                                <select id="perm_muni" name="perm_muni" class="table_input">
+                                    <option value="" disabled selected>Select City</option>
+                                    <option value="Quezon City">Quezon City</option>
+                                    <option value="Manila">Manila</option>
+                                    <option value="Makati City">Makati City</option>
+                                    <option value="Pasig City">Pasig City</option>
+                                    <option value="Caloocan City">Caloocan City</option>
+                                    <option value="Taguig City">Taguig City</option>
+                                    <option value="Cebu City">Cebu City</option>
+                                    <option value="Davao City">Davao City</option>
+                                    <option value="Others">Others (Please specify)</option>
+                                </select>
+                            </td>
+                            <td colspan="3">
+                                <label for="perm_province">Province</label>
+                                <select id="perm_province" name="perm_province" class="table_input">
+                                    <option value="" disabled selected>Select Province</option>
+                                    <option value="Metro Manila">Metro Manila (NCR)</option>
+                                    <option value="Bulacan">Bulacan</option>
+                                    <option value="Cavite">Cavite</option>
+                                    <option value="Laguna">Laguna</option>
+                                    <option value="Rizal">Rizal</option>
+                                    <option value="Cebu">Cebu</option>
+                                    <option value="Davao del Sur">Davao del Sur</option>
+                                    <option value="Others">Others (Please specify)</option>
+                                </select>
+                            </td>
+                            <td colspan="4">
+                                <label for="perm_country">Country</label>
+                                <select id="perm_country" name="perm_country" class="table_input">
+                                    <option value="Philippines" selected>Philippines</option>
+                                    <option value="United States">United States</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </td>
+                            <td colspan="2">
+                                <label for="perm_zip">Zip Code</label>
+                                <select id="perm_zip" name="perm_zip" class="table_input">
+                                    <option value="" disabled selected>Select Zip</option>
+                                    <option value="1100">1100 (QC)</option>
+                                    <option value="1000">1000 (Manila)</option>
+                                    <option value="1200">1200 (Makati)</option>
+                                    <option value="1600">1600 (Pasig)</option>
+                                    <option value="1400">1400 (Caloocan)</option>
+                                    <option value="6000">6000 (Cebu)</option>
+                                    <option value="8000">8000 (Davao)</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="Tableform" style="margin-top: 20px;">
+                    <label style="text-align: left; font-size: 11px;">4. Parent's/Guardian's Information</label>
+                    <table>
+                        <tr>
+                            <td colspan="4" style="font-size: 11px;">Father's Name</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 25%;">
+                                <label for="father_last_name">Last Name</label>
+                                <input type="text" id="father_last_name" name="father_last_name" class="table_input">
+                            </td>
+                            <td style="width: 25%;">
+                                <label for="father_first_name">First Name</label>
+                                <input type="text" id="father_first_name" name="father_first_name" class="table_input">
+                            </td>
+                            <td style="width: 25%;">
+                                <label for="father_middle_name">Middle Name</label>
+                                <input type="text" id="father_middle_name" name="father_middle_name" class="table_input">
+                            </td>
+                            <td style="width: 25%;">
+                                <label for="father_contact">Contact Number</label>
+                                <input type="text" id="father_contact" name="father_contact" class="table_input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="font-size: 11px;">Mother's Maiden Name</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="mother_last_name">Last Name</label>
+                                <input type="text" id="mother_last_name" name="mother_last_name" class="table_input">
+                            </td>
+                            <td>
+                                <label for="mother_first_name">First Name</label>
+                                <input type="text" id="mother_first_name" name="mother_first_name" class="table_input">
+                            </td>
+                            <td>
+                                <label for="mother_middle_name">Middle Name</label>
+                                <input type="text" id="mother_middle_name" name="mother_middle_name" class="table_input">
+                            </td>
+                            <td>
+                                <label for="mother_contact">Contact Number</label>
+                                <input type="text" id="mother_contact" name="mother_contact" class="table_input">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="4" style="font-size: 11px;">Legal Guardian's Name</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="guardian_last_name">Last Name</label>
+                                <input type="text" id="guardian_last_name" name="guardian_last_name" class="table_input">
+                            </td>
+                            <td>
+                                <label for="guardian_first_name">First Name</label>
+                                <input type="text" id="guardian_first_name" name="guardian_first_name" class="table_input">
+                            </td>
+                            <td>
+                                <label for="guardian_middle_name">Middle Name</label>
+                                <input type="text" id="guardian_middle_name" name="guardian_middle_name" class="table_input">
+                            </td>
+                            <td>
+                                <label for="guardian_contact">Contact Number</label>
+                                <input type="text" id="guardian_contact" name="guardian_contact" class="table_input">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+    </center>
+</body>
+</html>

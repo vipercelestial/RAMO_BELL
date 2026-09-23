@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table of Contents</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            background-color: #f8f8f5;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px;
+            color: #202124;
+        }
+
+        .Cols_Container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            align-items: start;
+        }
+
+        .Sum_CC {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: #202124;
+            transition: color 0.15s ease;
+        }
+
+        summary:hover {
+            color: #1a73e8;
+        }
+
+        h2 {
+            color: #202124;
+            margin-bottom: 5px;
+            margin-top: 15px;
+            border-bottom: 2px solid #eef3ef;
+            padding-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-size: 1.1em;
+        }
+
+        .Sum_CC li:first-of-type h2 {
+            margin-top: 0px;
+        }
+
+        details[open] summary {
+            color: #1a73e8;
+        }
+
+        ol, ul {
+            padding-left: 25px;
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        .chapter-list {
+            list-style: none;
+            padding-left: 0;
+        }
+    </style>
+    </head>
+
+<body>
+
+    <h1>Table of Contents</h1>
+    
+    <div class="Cols_Container">
+        <!-- COLUMN 1 (Chapters 1-10) -->
+        <div class="Sum_CC">
+            <ol class="chapter-list">
+                <li>
+                    <h2>Chapter 1</h2>
+                    <details>
+                        <summary>HTML - OVERVIEW</summary>
+                        <ol type="A">
+                            <li>Basic HTML Document
+                                <ul>
+                                    <li>Basic HTML Document</li>
+                                </ul>
+                            </li>
+                            <li>HTML Tags</li>
+                            <li>HTML Document Structure
+                                <ul>
+                                    <li>The &lt;!DOCTYPE&gt; Declaration</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 2</h2>
+                    <details>
+                        <summary>HTML - BASIC TAGS</summary>
+                        <ol type="A">
+                            <li>Heading Tags</li>
+                            <li>Paragraph Tag</li>
+                            <li>Line Break Tag</li>
+                            <li>Centering Content</li>
+                            <li>Horizontal Lines</li>
+                            <li>Preserve Formatting</li>
+                            <li>Nonbreaking Spaces</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 3</h2>
+                    <details>
+                        <summary>HTML - ELEMENTS</summary>
+                        <ol type="A">
+                            <li>HTML Tag vs. Element</li>
+                            <li>Nested HTML Elements</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 4</h2>
+                    <details>
+                        <summary>HTML - ATTRIBUTES</summary>
+                        <ol type="A">
+                            <li>Core Attributes</li>
+                            <li>Internationalization Attributes</li>
+                            <li>The xml:lang Attribute</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 5</h2>
+                    <details>
+                        <summary>HTML - FORMATTING</summary>
+                        <ol type="A">
+                            <li>Bold Text</li>
+                            <li>Italic Text</li>
+                            <li>Underlined Text</li>
+                            <li>Strike Text</li>
+                            <li>Monospaced Font</li>
+                            <li>Superscript Text</li>
+                            <li>Subscript Text</li>
+                            <li>Inserted Text</li>
+                            <li>Deleted Text</li>
+                            <li>Larger Text</li>
+                            <li>Smaller Text</li>
+                            <li>Grouping Content</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 6</h2>
+                    <details>
+                        <summary>HTML - PHRASE TAGS</summary>
+                        <ol type="A">
+                            <li>Emphasized Text</li>
+                            <li>Marked Text</li>
+                            <li>Strong Text</li>
+                            <li>Text Abbreviations</li>
+                            <li>Acronym Element</li>
+                            <li>Text Direction</li>
+                            <li>Special Terms</li>
+                            <li>Quoting Text</li>
+                            <li>Short Quotations</li>
+                            <li>Text Citations</li>
+                            <li>Computer Code</li>
+                            <li>Keyboard Input</li>
+                            <li>Programming Variables</li>
+                            <li>Program Output</li>
+                            <li>Address Text</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 7</h2>
+                    <details>
+                        <summary>HTML - META TAGS</summary>
+                        <ol type="A">
+                            <li>Adding Meta Tags</li>
+                            <li>Meta Tags Attributes</li>
+                            <li>Specifying Keywords</li>
+                            <li>Document Description</li>
+                            <li>Document Revision Date</li>
+                            <li>Document Refreshing</li>
+                            <li>Page Redirection</li>
+                            <li>Setting Cookies</li>
+                            <li>Setting Author Name</li>
+                            <li>Specify Character Encoding</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 8</h2>
+                    <details>
+                        <summary>HTML - COMMENTS</summary>
+                        <ol type="A">
+                            <li>Valid vs Invalid Comments</li>
+                            <li>Multiline Comments</li>
+                            <li>Conditional Comments</li>
+                            <li>Using Comment Tag</li>
+                            <li>Commenting Script Code</li>
+                            <li>Commenting Style Sheets</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 9</h2>
+                    <details>
+                        <summary>HTML - IMAGES</summary>
+                        <ol type="A">
+                            <li>Insert Image</li>
+                            <li>Set Image Location</li>
+                            <li>Set Image Width/Height</li>
+                            <li>Set Image Border</li>
+                            <li>Set Image Alignment</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 10</h2>
+                    <details>
+                        <summary>HTML - TABLES</summary>
+                        <ol type="A">
+                            <li>Table Heading</li>
+                            <li>Cellpadding and Cellspacing Attributes</li>
+                            <li>Colspan and Rowspan Attributes</li>
+                            <li>Tables Backgrounds</li>
+                            <li>Tables Height and Width</li>
+                            <li>Table Caption</li>
+                            <li>Table Header, Body, and Footer</li>
+                            <li>Nested Tables</li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+        </div>
+
+        <!-- COLUMN 2 (Chapters 11-20) -->
+        <div class="Sum_CC">
+            <ol class="chapter-list">
+                <li>
+                    <h2>Chapter 11</h2>
+                    <details>
+                        <summary>HTML - LISTS</summary>
+                        <ol type="A">
+                            <li>HTML Unordered Lists
+                                <ul>
+                                    <li>The type Attribute</li>
+                                </ul>
+                            </li>
+                            <li>HTML Ordered Lists
+                                <ul>
+                                    <li>The type Attribute</li>
+                                    <li>The start Attribute</li>
+                                </ul>
+                            </li>
+                            <li>HTML Definition Lists</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 12</h2>
+                    <details>
+                        <summary>HTML - TEXT LINKS</summary>
+                        <ol type="A">
+                            <li>Linking Documents</li>
+                            <li>The target Attribute</li>
+                            <li>Use of Base Path</li>
+                            <li>Linking to a Page Section</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 13</h2>
+                    <details>
+                        <summary>HTML - IMAGE LINKS</summary>
+                        <ol type="A">
+                            <li>Create Image Links</li>
+                            <li>Mouse-Sensitive Images
+                                <ul>
+                                    <li>Server-Side Image Maps</li>
+                                    <li>Client-Side Image Maps</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 14</h2>
+                    <details>
+                        <summary>HTML - EMAIL LINKS</summary>
+                        <ol type="A">
+                            <li>HTML Email Tag</li>
+                            <li>Default Subject and Body</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 15</h2>
+                    <details>
+                        <summary>HTML - FRAMES</summary>
+                        <ol type="A">
+                            <li>Creating Frames</li>
+                            <li>The &lt;frameset&gt; Tag Attributes</li>
+                            <li>The &lt;frame&gt; Tag Attributes</li>
+                            <li>Browser Support for Frames</li>
+                            <li>Frame Link Targets</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 16</h2>
+                    <details>
+                        <summary>HTML - IFRAMES</summary>
+                        <ol type="A">
+                            <li>The &lt;iframe&gt; Tag Attributes</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 17</h2>
+                    <details>
+                        <summary>HTML - BLOCKS</summary>
+                        <ol type="A">
+                            <li>Block Level Elements</li>
+                            <li>Inline Level Elements</li>
+                            <li>Grouping HTML Elements</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 18</h2>
+                    <details>
+                        <summary>HTML - BACKGROUNDS</summary>
+                        <ol type="A">
+                            <li>HTML Background with Colors</li>
+                            <li>HTML Background with Images</li>
+                            <li>Patterned and Transparent Backgrounds</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 19</h2>
+                    <details>
+                        <summary>HTML - COLORS</summary>
+                        <ol type="A">
+                            <li>Color Methods</li>
+                            <li>HTML Color Hex Codes</li>
+                            <li>HTML Color Names</li>
+                            <li>HTML Color RGB Values</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 20</h2>
+                    <details>
+                        <summary>HTML - FONTS</summary>
+                        <ol type="A">
+                            <li>Setting Font Size</li>
+                            <li>Setting Font Face</li>
+                            <li>Setting Font Color</li>
+                            <li>The &lt;basefont&gt; Element</li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+        </div>
+
+        <!-- COLUMN 3 (Chapters 21-30) -->
+        <div class="Sum_CC">
+            <ol class="chapter-list">
+                <li>
+                    <h2>Chapter 21</h2>
+                    <details>
+                        <summary>HTML - FORMS</summary>
+                        <ol type="A">
+                            <li>Form Attributes</li>
+                            <li>Form Controls
+                                <ul>
+                                    <li>Text Input Controls</li>
+                                    <li>Checkbox Controls</li>
+                                    <li>Radio Button Controls</li>
+                                    <li>Select Box Controls</li>
+                                    <li>File Upload Boxes</li>
+                                    <li>Button Controls</li>
+                                    <li>Hidden Form Controls</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 22</h2>
+                    <details>
+                        <summary>HTML - EMBED MULTIMEDIA</summary>
+                        <ol type="A">
+                            <li>The &lt;embed&gt; Object Tag</li>
+                            <li>Supported Video and Audio Formats</li>
+                            <li>The &lt;object&gt; Element</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 23</h2>
+                    <details>
+                        <summary>HTML - MARQUEES</summary>
+                        <ol type="A">
+                            <li>The &lt;marquee&gt; Syntax</li>
+                            <li>Marquee Tag Attributes</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 24</h2>
+                    <details>
+                        <summary>HTML - HEADER</summary>
+                        <ol type="A">
+                            <li>The &lt;head&gt; Element</li>
+                            <li>The &lt;title&gt; Element</li>
+                            <li>The &lt;meta&gt; Element</li>
+                            <li>The &lt;base&gt; Element</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 25</h2>
+                    <details>
+                        <summary>HTML - STYLE SHEET</summary>
+                        <ol type="A">
+                            <li>External Style Sheet</li>
+                            <li>Internal Style Sheet</li>
+                            <li>Inline Style Sheet</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 26</h2>
+                    <details>
+                        <summary>HTML - JAVASCRIPT</summary>
+                        <ol type="A">
+                            <li>External Script Loading</li>
+                            <li>Internal Script Execution</li>
+                            <li>The &lt;noscript&gt; Element</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 27</h2>
+                    <details>
+                        <summary>HTML - LAYOUTS</summary>
+                        <ol type="A">
+                            <li>Layouts Using Tables</li>
+                            <li>Layouts Using DIV and SPAN</li>
+                            <li>HTML5 Layout Elements</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 28</h2>
+                    <details>
+                        <summary>HTML - EVENTS REFERENCE</summary>
+                        <ol type="A">
+                            <li>Window Events</li>
+                            <li>Form Events</li>
+                            <li>Keyboard Events</li>
+                            <li>Mouse Events</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 29</h2>
+                    <details>
+                        <summary>HTML - ATTRIBUTE REFERENCE</summary>
+                        <ol type="A">
+                            <li>Global Attributes</li>
+                            <li>Element-Specific Attributes</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 30</h2>
+                    <details>
+                        <summary>HTML - FONTS REFERENCE</summary>
+                        <ol type="A">
+                            <li>Standard Web Safe Fonts</li>
+                            <li>Monospace vs Sans-Serif Fonts</li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+        </div>
+
+        <!-- COLUMN 4 (Chapters 31-35) -->
+        <div class="Sum_CC">
+            <ol class="chapter-list">
+                <li>
+                    <h2>Chapter 31</h2>
+                    <details>
+                        <summary>HTML - COLOR NAMES</summary>
+                        <ol type="A">
+                            <li>Standard Color Palettes</li>
+                            <li>W3C Validated Colors</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 32</h2>
+                    <details>
+                        <summary>HTML - URL ENCODING</summary>
+                        <ol type="A">
+                            <li>ASCII Translation Character Set</li>
+                            <li>Common URL Hex Keys</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 33</h2>
+                    <details>
+                        <summary>LANGUAGE ISO CODES</summary>
+                        <ol type="A">
+                            <li>Two-Letter Language Designations</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 34</h2>
+                    <details>
+                        <summary>HTML - CHARACTER ENCODINGS</summary>
+                        <ol type="A">
+                            <li>UTF-8 Standards</li>
+                            <li>ISO-8859-1 Standards</li>
+                        </ol>
+                    </details>
+                </li>
+
+                <li>
+                    <h2>Chapter 35</h2>
+                    <details>
+                        <summary>HTML - DEPRECATED TAGS</summary>
+                        <ol type="A">
+                            <li>Obsolete Visual Formatting Elements</li>
+                            <li>Modern CSS Alternatives</li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

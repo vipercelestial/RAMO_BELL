@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Class Record</title>		
+		<style>
+
+			/* background image */
+			#bg-image {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100vw;
+				height: 100vh;
+				object-fit: cover;
+
+				filter: blur(25px) brightness(0.5);
+				transform: scale(1.05);
+				z-index: -1;
+			}
+
+		
+			/* small images used in the table (student photos) */
+			table td img {
+				display: block;
+				width: 120px;
+				aspect-ratio: 1 / 1;
+				object-fit: cover;
+				border-radius: 12px;
+				margin: 6px auto;
+				border-radius: 20px;
+			}
+
+			body {
+			background-color: #0b0b16;	
+			color:  #ffffff;
+			font-family: 'Segoe UI', Arial, sans-serif;
+			margin: 50px;
+			padding-bottom: 50px;
+			}
+
+			h1 {
+				background: rgba(26, 9, 51, 0.45);
+				color: #ffffff;
+
+				text-align: center;
+				font-family: Impact, sans-serif;
+				letter-spacing: 1.5px;
+
+				padding: 18px 40px;
+				width: fit-content;
+				margin: 50px auto 20px auto;
+
+				border-radius: 30px;
+				border-top: 2px solid rgba(255, 255, 255, 0.3);
+				border-left: 2px solid rgba(255, 255, 255, 0.3);
+				border-right: 0 solid transparent;
+				border-bottom: 0 solid transparent;
+
+				transition:
+					transform 0.3s ease-in-out,
+					background-color 0.3s ease-in-out,
+					text-shadow 0.5s ease-in,
+					border-right 0.3s ease,
+					border-bottom 0.3s ease;
+			}
+			
+			h1:hover {
+				transform: scale(1.05);
+				background-color:#593d8367;
+				text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+				border-right: 2px solid rgba(255, 255, 255, 0.3);
+				border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+			}
+
+			table {
+				color:#593d83af;
+				background-color: #593d8310;
+				text-align: center;
+				font-family: 'Segoe UI', Arial, sans-serif;
+				margin: 30px auto;
+				width: 70%;
+				border-radius: 30px;
+				border-spacing: 10px;
+				border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+				border-left: 1.5px solid rgba(255, 255, 255, 0.3);	
+				background: rgba(26, 9, 51, 0.50);
+
+				text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+
+				transition: 
+					transform 0.3s ease-in-out,
+					box-shadow 0.3s ease-in-out; 
+			}
+
+			table:hover {
+				transform: scale(1.02);
+				box-shadow: 0 0 20px rgba(206, 153, 255, 0.4);
+			}
+
+			th, td, tr{
+				color:  #ffffff;
+				border-radius: 15px;
+				border-spacing: 10px;
+				padding: 10px;
+				border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+				border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+				transition: 
+					transform 0.3s ease-in-out,
+					box-shadow 0.3s ease-in-out; 
+			}
+
+			th:first-child {
+				width: 150px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- background img -->
+		<img src="bg.jpg" alt="Background Image" id="bg-image">
+
+
+		<h1>11 BELL <br> CLASS RECORD</h1>
+	<table>
+		<tr>
+		   <th rowspan="2">PICTURE</th>
+		   <th colspan="3">NAME</th>
+		   <th colspan="3">ATTENDANCE</th>
+		   <th rowspan="2">GROUP</th>
+		</tr>
+
+		<tr class="tr1and2">
+			<td>LAST NAME</td>
+			<td>FIRST NAME</td>
+			<td>MIDDLE NAME</td>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			
+		</tr>
+		
+		<tr>
+			<td><img src="pics\jerek.png"></td>
+			<td>RAMO</td>
+			<td>JERIC</td>
+			<td class="center">Y.</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td rowspan="3">1</td>
+		</tr>
+
+		<tr>
+			<td><img src="pics\gavin.png"></td>
+			<td>REYES</td>
+			<td>GAVIN ANGELO</td>
+			<td class="center">S.</td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+		
+		<tr>
+			<td><img src="pics\eli.png"></td>
+			<td>SAN ANTONIO</td>
+			<td>ELISHA</td>
+			<td>G.</td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>		
+		
+		<tr>
+			<td><img src="pics\gab.png"></td>
+			<td>CASPE</td>
+			<td>GABRIEL</td>
+			<td>B.</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td rowspan="3" class="center">2</td>
+		</tr>
+		
+		<tr>
+			<td><img src="pics\zhian.png"></td>
+			<td>VILLIANUEVA</td>
+			<td>ZHIAN</td>
+			<td>P.</td>
+			<td></td>
+			<td></td>
+			<td></td>		
+		</tr>
+		
+		<tr>
+			<td><img src="pics\renz.png"></td>
+			<td>VILLAR</td>
+			<td>RENZ JOMARI</td>
+			<td>B.</td>
+			<td></td>
+			<td></td>
+			<td ></td>		
+		</tr>
+	</table>
+   </body>
+</html>	
+		
+		
+		
+	</body>
+
+</html>

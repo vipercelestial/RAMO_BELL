@@ -1,0 +1,19 @@
+h1, p {
+    color: #440a44;
+    background-color: #8d62b3;
+}
+
+#important {
+    background-color: green;
+
+}
+
+p.mid {
+    color: red;
+    text-align: center;
+}
+
+p.en {
+    font-size: 300%;
+}
+

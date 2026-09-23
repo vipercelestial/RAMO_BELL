@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>HTML Forms</title>
+	</head>
+
+   <body>
+
+      <h1>HTML Forms</h1>
+
+    <form>
+        <label>First Name: </label>
+	<input type="text" id="fname" name="fname" placeholder="Jeric" size="5" autofocus required>
+	
+	<br><br>
+	<label for="lname">Last Name: </label>
+	<input type="text" id="lname" name="lname" value="Ramo" disabled>
+
+	<hr>
+	<label for="uname">Username: </label>
+	<input typea="text" id="uname" name="uname" >
+	<br><br>
+	<label for="pwd">Password:</label>
+	<input type="password" id="pwd" name="pwd" maxlength="4">
+	<br><br>
+	<input type="Submit"> <input type="Reset" value="Redo">
+
+	<hr>
+	<p>What is the color of blackboard?</p>
+	<input type="radio" id ="Black" name="black">
+	<label for="Black">Black</label>
+	<br>
+	<input type="radio" id ="Red" name="Red">
+	<label for="Black">Red</label>
+	<br>
+	<input type="radio" id ="Green" name="Green">
+	<label for="Black">Green</label>
+	<br>
+	<input type="radio" id ="Pink" name="Pink">
+	<label for="Black">Pink</label>
+
+	<hr>
+	<p>Which of the following are HTML Tags</p>
+	<input type="checkbox" id="par" name="par">
+	<label for="par">&lt;p&gt;</label>
+<br>
+	<input type="checkbox" id="src" name="src">
+	<label for="src">&lt;src&gt;</label>
+<br>
+	<input type="checkbox" id="head" name="head">
+	<label for="head">&lt;head&gt;</label>
+<br>
+	<input type="checkbox" id="br" name="br">
+	<label for="br">&lt;br &gt;</label>
+<br>
+	<input type="button" onclick="alert('dih')" value="Click Me!">
+    </form>
+
+<hr>
+	<label for="favcolo">Select you favorite color: </label>
+	<input type="color" id="favcolor" name="favcolor">
+<br>
+	<label for="bday">Birthday: </label>
+	<input type="date" id="bday" name="bday">
+	
+	<br>
+	<label for="bdaytime">Birthday with Time: </label>
+	<input type="datetime-local" id="bdaytime" name="bdaytime">
+	
+	<br>
+	<label for="email">Email: </label>
+	<input type="email" id="email" name="email">
+	
+	<br>
+	<input type="image" src="icon.png" alt="icon" alt="Submit" width="60" height="60">
+	 
+	<hr>
+	<label for="myfile">Upload file here: </label>
+	<input type="file" id="myfile" name="myfile" multiple>
+	
+	<br><br><br>
+	<hr>
+	<label for="mo">Select month: </label>
+	<input type="month" id="mo" name="mo">
+	<br><br><br>
+	<label for="mynumber">Select a number: </label>
+	<input type="number" id="mynumber" name="mynumber" min="1" max="5" step="3">
+	
+	<br><br><br>
+	<hr>
+	<label for="sdate">Enter 1st Pediod: </label>
+	<input type="date" id="edate" name="sdate" max="2026-08-01">
+	<label for="edate">Enter Last Period: </label>
+	<input type="date" id="edate" name="edate" max="2026-08">
+	
+	<br><br><br>
+	<hr>
+	<label for="tel">Telephone #: </label>
+	<input type="text" id="tel" name="tel" pattern="[0-9]{4}-[0-9]{3}-[0-9]{4}" placeholder="ex. 5534-343-6658">
+	
+	<br><br><br>
+	<label for="PL">Select Language: </label>
+	<input list="PL">
+	<datalist id="PL">
+		<option value="C++">
+		<option value="Java">
+		<option value="Python">
+	</datalist>
+   </body>
+
+<html>
