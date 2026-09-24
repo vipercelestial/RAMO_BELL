@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        
+/* custom animated text animation thing - Red & Gold Shimmer */
+        .animated-text {
+            place-self: center;
+            background: linear-gradient(90deg, #ffccd5, #ff4d4d, #ffd700) -100%/ 200%;
+
+            -webkit-background-clip: text;
+                    background-clip: text;
+
+            color: transparent;
+            animation: shimmer 2s linear infinite
+            }
+
+            @keyframes shimmer { to { background-position: 100% } }
 
         #bg-image {
             position: fixed;
@@ -16,96 +30,229 @@
             height: 100vh;
             object-fit: cover;
 
-            filter: blur(1px) brightness(0.5);
+            /* TIMPALA PARA SA LIGHT ORANGE BACKGROUND */
+            filter: blur(5px);
             transform: scale(1.05);
             z-index: -1;
+            transition: filter 1s ease;
+        }
+
+        body {
+            background-color: #1a0505; 
+            color: #ffffff;
+            text-shadow: 0 0 10px #8b0000, 0 0 20px #ff0000;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 5px 5px;
+            padding: 5%;
+            border-radius: 15px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        h1 {
+            background: rgba(160, 15, 15, 0.2);
+            color: #fce76c;
+            backdrop-filter: blur(5px);
+
+            text-align: center;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            letter-spacing: 1.5px;
+
+            padding: 18px 40px;
+            width: fit-content;
+            margin: 50px auto 20px auto;
+
+            border-radius: 30px;
+            border-top: 2px solid rgba(255, 215, 0, 0.7);
+            border-left: 2px solid rgba(255, 215, 0, 0.7);
+            text-shadow: 0 0 10px #ffd700, 0 0 20px #ff0000;
         }
 
         .profile-container {
+            width: 90%;
+            max-width: 680px;
+            padding: 15px;
+
             display: flex;
-            align-items: center; 
-            gap: 30px; 
+            flex-direction: row;
+            gap: 10px;
+
+            background: rgba(68, 9, 9, 0.519);
+            border-radius: 30px;
+            backdrop-filter: blur(5px);
+            border-top: 2px solid rgba(255, 215, 0, 0.7);
+            border-left: 2px solid rgba(255, 215, 0, 0.7);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.3);
+            
             text-align: left;
-
-            background-color: rgba(99, 24, 124, 0.5);
-            backdrop-filter: blur(10px);
-
-            margin-top: 100px;
-            margin: 50px;        
-            padding: 20px;    
-
-            border-radius: 10px;
         }
 
+        /*left side (info / dream career) */
+        .profile-left {
+            display: flex;
+            flex-direction: column;
+            width: 40%;
+            text-align: center
+        }
+
+        .profile-left fieldset {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 10px;
+            padding-bottom: 13px;
+
+            border-radius: 20px;
+            border: transparent;
+            border-top: 2px solid rgba(255, 215, 0, 0.7);
+            border-left: 2px solid rgba(255, 215, 0, 0.7);
+        }
+
+        .profilepic {
+            border-radius: 20px;
+            border: 2px solid rgba(255, 215, 0, 0.6);
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+        }
+
+        .profile-left .fieldset1{
+            background-color: transparent;
+            border: none;
+        }
+
+        .profile-left .fieldset2 {
+            background-color: transparent;
+            border: transparent;
+
+            border-left: 2px solid rgba(255, 215, 0, 0.7);
+        }
+
+        .profile-left legend {
+            font-weight: bolder;
+            font-size: 1.1rem;
+            color: #ffd700;
+        }
+
+        .profile-left li {
+            text-align: left;
+        }
+
+        /*right side (favorite tech, programming languages, tools, hobbies) */
         .profile-right {
             display: flex;
-            flex-direction: column; 
-            gap: 12px; 
-            width: 100%;
-        }
-
-        .profile-right p {
-            margin: 0;
-            padding: 12px 15px;
-            border-radius: 10px;
-            background-color: rgba(73, 22, 98, 0.5);
-            color: white;
+            flex-direction: column;
+            gap: 12px;
+            width: 60%;
         }
         
         .profile-right legend {
-            font-weight: bold;
-            color: white;
-            
-            border: 1px solid rgb(208, 16, 16);
+            font-weight: bolder;
+            font-size: 1.1rem;
+            color: #ffd700;
         }
 
-        fieldset {
-            border-radius: 10px;
+        .profile-right fieldset {
+            background-color: rgba(255, 255, 255, 0.05);
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.1);
 
-            border-color: rgb(208, 16, 16);
+            border: transparent;
+            border-left: #ffd700 3px solid;
+            border-radius: 20px;
+            border-radius: 5px;
+            border
+        }
+
+
+        /*badges design - Gold & Red Accent */
+        .badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 1px;
+        }
+
+        .badge {
+            background: rgba(255, 215, 0, 0.12);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            color: #ffffff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
         }
     </style>
 </head>
 
 <body>
-        <img id="bg-image" src="images/background.jpg" alt="Background Image">
+        <img id="bg-image" src="images/bg.jpg" alt="Background Image">
+
+        <h1>MY TECHPRO PROFILE</h1>
 
 <div class="profile-container">
 
     <div class="profile-left">
         <fieldset>
-            <legend>Profile Picture</legend>
-            <img src="images/profile.png" alt="Profile Picture" width="160" height="180">
+            <legend>INFO</legend>
+            <img class="profilepic" src="images/profile.png" alt="Profile Picture" width="160" height="180">
+
+            <fieldset class="fieldset1">
+                <ul>
+                    <li> <span class="animated-text">Ramo, Jeric Y.</span></li>
+                    <li> <span class="animated-text">11-Bell</span></li>
+                </ul>
+            </fieldset>
+
+            <fieldset class="fieldset2">
+                <legend>- Dream Career -</legend>
+                <p>My Dream Career is to become a <span class="animated-text"><ins>I.T. SPECIALIST</ins></span>"</p>
+            </fieldset>
+
         </fieldset>
     </div>
 
     <div class="profile-right">
 
         <fieldset>
-            <legend>Name:</legend>
-            <p>Ramo, Jeric Y.</p>
+            <legend align="left">- Favorite Technologies -</legend>
+            <div class="badge-container">
+                <div class="badge">Computer Hardwares</div>
+                <div class="badge">Robotics</div>
+                <div class="badge">Cybersecurity</div>
+                <div class="badge">A.I. (Artificial Intelligence)</div>
+                <div class="badge">Wireless / Networking</div>
+            </div>
         </fieldset>
 
         <fieldset>
-            <legend>Grade/Section:</legend>
-            <p>11-Bell</p>
+            <legend align="left">- Favorite Programming Languages -</legend>
+            <div class="badge-container">
+                <div class="badge">JavaScript</div>
+                <div class="badge">HTML/CSS</div>
+                <div class="badge">Python</div>
+                <div class="badge">Java</div>
+            </div>
         </fieldset>
 
         <fieldset>
-            <legend>Favorite Technology:</legend>
-            <p>Wireless Communication and AI</p>
+            <legend align="left">- Favorite Tools/Softwares -</legend>
+            <div class="badge-container">
+                <div class="badge">VSCode</div>
+                <div class="badge">Git / GitHub</div>
+                <div class="badge">BlockBench</div>
+                <div class="badge">Davinci Resolve</div>
+                <div class="badge">A.E. (Adobe After Effects)</div>
+            </div>
         </fieldset>
 
         <fieldset>
-            <legend>Favorite Programming Language:</legend>
-            <p>Python</p>
-        </fieldset>
-
-        <fieldset>
-            <legend>Dream Career:</legend>
-            <p>IT Specialist</p>
+            <legend align="left">- Hobbies -</legend>
+            <div class="badge-container">
+                <div class="badge">Minecraft</div>
+                <div class="badge">Roblox</div>
+                <div class="badge">Competitive Gaming</div>
+                <div class="badge">Video Editing</div>
+                <div class="badge">Cycling</div>
+                <div class="badge">Coding</div>
+            </div>
         </fieldset>
     </div>
 </div>
