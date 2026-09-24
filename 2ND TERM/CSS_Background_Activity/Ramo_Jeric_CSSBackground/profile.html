@@ -7,54 +7,108 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        body {
-            background: rgb(144, 238, 144) url('images/background.jpg') center / cover no-repeat fixed;
+
+        #bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+
+            filter: blur(1px) brightness(0.5);
+            transform: scale(1.05);
+            z-index: -1;
         }
 
-        .info-box {
-            color: white;
-            text-align: center;
-            padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-        }
-
-        .info-box hr {
-                color: rgba(39, 141, 94, 0.404);
-        }
-
-        .info-box h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
-            color: rgba(39, 141, 93);
-        }
-
-        .info-box p {
-            font-size: 1.2em;
-            padding: 10px;
-            margin: 5px;
+        .profile-container {
+            display: flex;
+            align-items: center; 
+            gap: 30px; 
             text-align: left;
 
-            border: 1px solid rgba(39, 141, 94, 0.404);
+            background-color: rgba(99, 24, 124, 0.5);
+            backdrop-filter: blur(10px);
+
+            margin-top: 100px;
+            margin: 50px;        
+            padding: 20px;    
+
             border-radius: 10px;
+        }
+
+        .profile-right {
+            display: flex;
+            flex-direction: column; 
+            gap: 12px; 
+            width: 100%;
+        }
+
+        .profile-right p {
+            margin: 0;
+            padding: 12px 15px;
+            border-radius: 10px;
+            background-color: rgba(73, 22, 98, 0.5);
+            color: white;
+        }
+        
+        .profile-right legend {
+            font-weight: bold;
+            color: white;
+            
+            border: 1px solid rgb(208, 16, 16);
+        }
+
+        fieldset {
+            border-radius: 10px;
+            padding: 10px;
             background-color: rgba(255, 255, 255, 0.1);
 
+            border-color: rgb(208, 16, 16);
         }
     </style>
 </head>
 
 <body>
-    <div class="info-box">
+        <img id="bg-image" src="images/background.jpg" alt="Background Image">
 
-        <h1>MY TECHPRO PROFILE</h1>
-        <hr>
-        <p><b>Name:</b> Ramo, Jeric Y.</p>
-        <p><b>Grade/Section:</b> 11-Bell</p>
-        <p><b>Favorite Technology:</b>Wireless Communication and AI</p>
-        <p><b>Favorite Programming Language:</b>Python</p>
-        <p><b>Dream Career:</b>IT Specialist</p>
+<div class="profile-container">
 
+    <div class="profile-left">
+        <fieldset>
+            <legend>Profile Picture</legend>
+            <img src="images/profile.png" alt="Profile Picture" width="160" height="180">
+        </fieldset>
     </div>
+
+    <div class="profile-right">
+
+        <fieldset>
+            <legend>Name:</legend>
+            <p>Ramo, Jeric Y.</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Grade/Section:</legend>
+            <p>11-Bell</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Favorite Technology:</legend>
+            <p>Wireless Communication and AI</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Favorite Programming Language:</legend>
+            <p>Python</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dream Career:</legend>
+            <p>IT Specialist</p>
+        </fieldset>
+    </div>
+</div>
 
 </body>
 </html>
