@@ -1,41 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>CSS Border Activity</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <title>CSS Border Activity</title>
     <style>
-        body {
-            background-color: white;
-            background-image: url('images/backgrond.jpg');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            background-attachment: fixed;
+        p { 
+            border-style: solid; 
+            border-width: 1px; 
+            border-color: maroon;
+            border-radius: 100;
         }
-
-        h1 {
-            border-top: 5px solid red;
-            border-right: 5px dashed blue;
+        h1{ 
+            border-top: 5px solid red; 
+            border-right: 5px dashed blue; 
             border-bottom: 8px double green;
             border-left: 3px dotted purple;
-
-            border-radius: 15px ;
+                }
+        .box { 
+            border-style: solid; 
+            border-width: 4px 4px 5px 5px; 
+            }
+        .boxwan{
+         border: 3px dashed blue;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .boxtu{
+            border: 5px double green;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .boxtr{
+            border: 2px dotted purple;
+            padding: 15px;
+        }
+        .bux { 
+            border: 3px solid #800000; 
+            border-radius: 10px; 
+        }
+        .circle { 
+            width: 150px; 
+            height: 150px; 
+            border: 10px solid #800000; 
+            border-radius: 50%; 
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        } 
+      .profile { 
+            border: 4px solid #800000; 
+            border-radius: 20px; 
+            padding: 20px;
+            width: 300px;
+            background-color: #fdfdfd;
+        }
+        .profile h2 {
+            color: #800000;
+            margin-top: 0;
+        }
+         .container {
+            display: flex;
+            gap: 24px;
+            max-width: 900px;
         }
 
-
-    </style>
-
-</head>
-
-<body>
-
-    <div class="main">
-
-    <h1>CSS Border Activity</h1>
-    <p>Learning CSS borders using Visual Studio Code.</p>    
    
+        .card {
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin: 0;
+            width: 220px;
+        }
+
+        .card-one {
+            border-style: dashed;
+            border-color: #3498db;
+            border-width: 3px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        
+        .card-two {
+            border-style: solid;
+            border-color: #e74c3c;
+            border-width: 6px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+       
+        .card-three {
+            border-style: double;
+            border-color: #2ecc71;
+            border-width: 8px;
+            padding: 25px;
+            border-radius: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>CSS Border Activity</h1> 
+        <p>Learning CSS borders using Visual Studio Code.</p>
+        <p class="box1">Solid</p>
+        <p class="boxwan">Dashed</p>
+        <p class="boxtu">Double</p>
+        <p class="boxtr">Dotted</p>
+        <p class="bux">Border Radius</p>
+        <p class="circle">circle</p>
+
+<div class="profile">
+        <h2>My TechPro Profile</h2>
+        <p><strong>Name:</strong>Jeric Y. Ramo</p>
+        <p><strong>Grade:</strong> 11 Bell</p>
+        <p><strong>Dream Career:</strong>I.T. Specialist</p>
     </div>
+<br>
+<br>
+     <div class="container">
+        <!-- Card 1 using p and class -->
+        <p class="card card-one">
+            <strong>Card 1:</strong> This card features a dashed blue border, moderate padding, and softly rounded corners.
+        </p>
+
+        <!-- Card 2 using p and class -->
+        <p class="card card-two">
+            <strong>Card 2:</strong> This card stands out with a thick solid red border, generous internal padding, and heavily rounded corners.
+        </p>
+
+        <!-- Card 3 using p and class -->
+        <p class="card card-three">
+            <strong>Card 3:</strong> This card utilizes a classic green double border paired with medium padding and balanced corner smoothing.
+        </p>
+    </div> 
+
+
+</body>
+</html>
 </body>
 </html>
