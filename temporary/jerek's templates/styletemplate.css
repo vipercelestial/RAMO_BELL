@@ -1,0 +1,225 @@
+/* =========================================================
+   DARK MATTER GLASSMORPHISM STYLE
+   ========================================================= */
+
+/* Base & Body Reset */
+body {
+    background-color: #0b0b16; /* Deep Dark Space Background */
+    color: #ffffff;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 20px 10px 50px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #593d83;
+    margin: 30px 0;
+    width: 80%;
+}
+
+/* 1. Fullscreen Loader Overlay */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f051d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(188, 64, 188, 0.2);
+    border-top: 5px solid #bc40bc;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+#loader p {
+    color: #e2bbfd;
+    font-family: sans-serif;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* 2. Fixed Blurred Background Image */
+#bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: blur(0) brightness(1);
+    transform: scale(1.05) rotate(-1deg);
+    animation: background-fade-in 4.5s ease forwards;
+    z-index: -1;
+}
+/* pasikat na animation para sa bg image haha */
+@keyframes background-fade-in {
+    to {
+        filter: blur(5px) brightness(0.5);
+    }
+}
+
+/* 3. Header Styling */
+.header-container {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    background: rgba(26, 9, 51, 0.45);
+    color: #ffffff;
+    text-align: center;
+    font-family: Impact, sans-serif;
+    letter-spacing: 1.5px;
+    padding: 18px 40px;
+    width: fit-content;
+    margin: 10px auto;
+    border-radius: 30px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+h3 {
+    background: rgba(26, 9, 51, 0.45);
+    color: #CE99FF;
+    text-align: center;
+    width: fit-content;
+    padding: 10px 24px;
+    margin: 10px auto;
+    border-radius: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* glass cards and main layout */
+.main-glass-card {
+    width: 90%;
+    max-width: 900px;
+    background: rgba(26, 9, 51, 0.2);
+    border-radius: 30px;
+
+/* border reflection thing */
+    border-top: 2px solid rgba(255, 255, 255, 0.3);  
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+
+    padding: 30px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
+}
+
+.glass-section {
+    margin-bottom: 30px;
+}
+
+/* glass titles */
+.glass-text {
+    display: inline-block;
+    color: #CE99FF;
+    font-family: Impact, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    background: rgba(26, 9, 51, 0.35);
+    border-radius: 20px;
+    border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+    border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    margin-bottom: 15px;
+}
+
+/* subcards inside glass container */
+.grid-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.inner-card {
+    flex: 1;
+    min-width: 220px;
+    background: rgba(26, 9, 51, 0.45);
+    border-radius: 20px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.inner-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    background: rgba(36, 9, 77, 0.75);
+    box-shadow: 0 0 25px rgba(206, 153, 255, 0.3);
+}
+
+.inner-card h4 {
+    color: #CE99FF;
+    margin-top: 0;
+}
+
+/* buttons */
+.btn-glass {
+    background-color: rgba(26, 9, 51, 0.35);
+    color: #CE99FF;
+    border: none;
+    border-radius: 15px;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 10px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-glass:hover {
+    background: #a855f7;
+    color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(206, 153, 255, 0.45);
+}
+
+/* custom animated text thing (first line to center)*/
+.animated-text {
+    /* place-self: center; */
+    background: linear-gradient(90deg, #593d83, #a855f7, #CE99FF) -100%/ 200%;
+
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    color: transparent;
+    animation: shimmer 2s linear infinite
+    }
+
+    @keyframes shimmer { to { background-position: 100% } }

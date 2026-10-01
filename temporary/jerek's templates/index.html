@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Activity Template</title>
+    <link rel="stylesheet" href="styletemplate.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+    <!-- Fullscreen Loading Overlay -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>LOADING ACTIVITY...</p>
+    </div>
+
+    <!-- Fixed Blurred Background Image -->
+    <img src="images/bg2.jpg" alt="Background Image" id="bg-image">
+
+    <!-- Header Section -->
+    <div class="header-container">
+        <h1>ACTIVITY TITLE</h1>
+        <h3>Ramo, Jeric Y. | 11-Bell</h3>
+    </div>
+
+    <!-- Main Content Container (Glass Card) -->
+    <main class="main-glass-card">
+        
+        <!-- SECTION 1 / PART A -->
+        <section class="glass-section">
+            <h2 class="glass-text">- Part A: Section Title -</h2>
+            <p class="animated-text">yea yea yea yea test</p>
+        </section>
+
+        <!-- SECTION 2 / PART B (Sample Grid Container) -->
+        <section class="glass-section">
+            <h2 class="glass-text">- Part B: Practice Cards -</h2>
+            <div class="grid-container">
+                <div class="inner-card">
+                    <h4>Card 1</h4>
+                    <p>Sample practice element.</p>
+                </div>
+                <div class="inner-card">
+                    <h4>Card 2</h4>
+                    <p>Sample practice element.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+        <!-- JS for loader -->
+    <script>
+        window.addEventListener("load", function() {
+            const loader = document.getElementById("loader");
+            
+            // waits for 1.5 seconds before hiding the loader
+            setTimeout(function() {
+                loader.classList.add("hidden");
+            }, 1500);
+        });
+    </script>
+</body>
+</html>
