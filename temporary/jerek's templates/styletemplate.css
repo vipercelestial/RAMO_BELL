@@ -135,8 +135,8 @@ h3 {
     border-left: 2px solid rgba(255, 255, 255, 0.3);
 
     padding: 30px;
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
     margin-bottom: 40px;
 }
@@ -170,18 +170,24 @@ h3 {
 .inner-card {
     flex: 1;
     min-width: 220px;
-    background: rgba(26, 9, 51, 0.45);
+    background: rgba(26, 9, 51, 0.2);
     border-radius: 20px;
     border-top: 2px solid rgba(255, 255, 255, 0.3);
     border-left: 2px solid rgba(255, 255, 255, 0.3);
     padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+    transition: 
+        transform 0.3s ease,
+        box-shadow 0.3s ease, 
+        background 0.3s ease,
+        border 0.3s ease,
 }
 
 .inner-card:hover {
     transform: translateY(-5px) scale(1.02);
-    background: rgba(36, 9, 77, 0.75);
-    box-shadow: 0 0 25px rgba(206, 153, 255, 0.3);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    background: rgba(36, 9, 77, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.5);
 }
 
 .inner-card h4 {
@@ -207,13 +213,13 @@ h3 {
     background: #a855f7;
     color: #ffffff;
     transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(206, 153, 255, 0.45);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.45);
 }
 
 /* custom animated text thing (first line to center)*/
 .animated-text {
     /* place-self: center; */
-    background: linear-gradient(90deg, #593d83, #a855f7, #CE99FF) -100%/ 200%;
+    background: linear-gradient(45deg, #593d83, #a855f7, #CE99FF) -100%/ 200%;
 
     -webkit-background-clip: text;
             background-clip: text;
