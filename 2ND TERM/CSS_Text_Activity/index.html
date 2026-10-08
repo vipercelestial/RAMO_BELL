@@ -8,24 +8,94 @@
   <style>
     body { font-family: Arial, sans-serif; }
 
+    #bg-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        filter: blur() brightness(1);
+        transform: scale(1.05) rotate(-1deg);
+        animation: background-fade-in 4.5s ease forwards;
+        z-index: -1;
+    }
+    /* pasikat na animation para sa bg image haha */
+    @keyframes background-fade-in {
+        to {
+            filter: blur(5px) brightness(0.9);
+        }
+    }
+
+    .main {
+        background: rgba(26, 9, 51, 0.45);
+        place-self: center;
+        color: #ffffff;
+        text-align: center;
+        font-family: Impact, sans-serif;
+        letter-spacing: 1.5px;
+        padding: 18px 40px;
+        width: fit-content;
+        margin-top: 50px;
+        border-radius: 30px;
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+        border-left: 2px solid rgba(255, 255, 255, 0.3);
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+
     h2 {
-        padding: 10px;
-        margin: 10px;
+        display: inline-block;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        font-family: Impact, sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        background: rgba(26, 9, 51, 0.2);
+        border-radius: 20px;
+        border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-style: none;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        width: 90%;
     }
 
     .parts_card {
-        padding: 20px;
-        margin: 20px;
-
+        color: #ffffff;
+        place-self: center;
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+        border-left: 2px solid rgba(255, 255, 255, 0.3);
+        width: 90%;
+        max-width: 800px;
+        margin: 50px; 
+        box-sizing: border-box;
+        padding: 40px 20px;
+        border-style: none;
+        
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        /* border-style: double; */
     }
     .part {
+        place-self: center;
         text-align: center;
-        border: 2px solid maroon;
-        margin: 10px 10px;
+        border: 3px solid rgba(255, 255, 255, 0.3); 
+        border-style: double;
+        width: 85%;
+        margin: 50px; 
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        margin: 30px;
         padding: 10px 25px;
     }
     #part-b {
-        margin: 0;
+        margin: 20px;
         color: maroon;
     }
     
@@ -54,26 +124,88 @@
     .lower { text-transform: lowercase; } 
     .capitalize { text-transform: capitalize; } 
     .normal { text-transform: none; }
+
+    /* part g */
+    .indent { text-indent: 40px; } 
+    .letters { letter-spacing: 3px; } 
+    .lines { line-height: 1.8; } 
+    .words { word-spacing: 10px; } 
+    .no-wrap { white-space: nowrap; } 
+
+    /* part h */
+    .shadow { text-shadow: 2px 2px 4px gray; }
+
+    /* part i */
+    legend {
+        font-size: 2.2em;
+        font-weight: bold;
+    }
+    /* at least one text decoration */
+    /* at least one text transformation */
+    /* at least one text-spacing property  */
+    /* a text shadow  */
+    /* good text/background contrast */
+    .part-i .profile-info {
+        text-decoration: underline;
+        text-transform: capitalize;
+        letter-spacing: 3px;
+        text-shadow: 2px 2px 4px rgb(255, 255, 255);
+        color: #ffffff;
+        border-left: 2px solid rgba(255, 255, 255, 0.3);
+        background-color: transparent;
+        padding: 10px;
+        width: fit-content;
+        place-self: center;
+        margin-top:10px;
+        margin bottom: 10px;
+        border-radius: 10px;
+    }
+    .part-i {
+        margin: 30px;
+    }
+    .part-I {
+        background: rgba(26, 9, 51, 0.45);
+        border-style: none;
+        border-radius: 30px;
+    }
+    fieldset {
+        border: 2px solid rgba(255, 255, 255, 0.3); 
+        background: transparent;
+        margin: 10px; 
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 20px;
+        color: #ffffff;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    legend {
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        background: rgba(26, 9, 51, 0.45);
+        margin: 10px; 
+        box-sizing: border-box;
+        padding: 10px;
+        border-radius: 20px;
+        text-align: center;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
   </style>
 </head>
 <body>
-    
-
+    <img src="images/bg4.jpg" alt="Background Image" id="bg-image">
 
     <div class="main">
-
-    <hr>
-        <div class="part">
             <h1>My CSS Text Activity</h1>
-            <p>CSS can change how text looks how it is arranged.</p>
-        </div>
+            <p>-CSS can change how text looks how it is arranged.</p>
     </div>
-    <hr>
+    
 
     <div class="parts_card">
         <div class="part">
             <h2>>- PART - B -<<br>CSS Text Basics</h2>
-            <p id="part-b">part - b basic text formatting</p>
+
+            <p id="part-b">part - b basic text formatting, maroon text.</p>
         </div>
 
         <div class="part">
@@ -81,7 +213,7 @@
             <p class="left">-Left aligned</p> 
             <p class="right">Right aligned-</p> 
             <p class="center">-Centered-</p> 
-            <p class="justify">This is a longer paragraph. Add enough words to observe justified text.</p>
+            <p class="justify">This is a longer paragraph. Add enough words to observe justified text. tes test test test test test</p>
         </div>
         <div class="part">
             <h2>>- PART - D -<<br>Text Decorations</h2>
@@ -112,10 +244,38 @@
 
         <div class="part">
             <h2>>- PART - G -<<br>Text Spacing</h2>
-
+            <p class="indent">Indent</p>
+            <p class="letters">Letter Spacing</p>
+            <p class="lines">Line Height</p>
+            <p class="words">Word Spacing</p>
+            <p class="no-wrap">No Wrap no wrap no wrap no wrap no wrap hahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah</p>
         </div>
-        <div></div>
-        <div></div>
+
+        <div class="part">
+            <h2>>- PART - H -<<br>Text Shadow</h2>
+            <p class="shadow">This paragraph has a shadow</p>
+            <h2>Challenge - trying two shadows separated by a comma:</h2>
+            <p style="text-shadow: 2px 2px 4px rgb(147, 25, 139), -2px -2px 4px rgb(162, 12, 12);">This paragraph has two shadows</p>
+        </div>
+
+        <div class="part-I">
+            <h2>>- PART - I -<<br>Mini-Project: My TechPro Text Profile</h2>
+
+            <fieldset class="part-i">
+                <legend align="center">My TechPro Text Profile</legend>
+                <div class="profile-info">
+                <p>Name: Ramo, Jeric Y.</p>
+                <p>Grade: 11</p>
+                <p>Section: Bell</p>
+                </div>
+
+                
+                <fieldset>
+                    <legend align="center">Short paragraph about ICT</legend>
+                    <p>-Information and Communication Technology (ICT) refers to the digital tools, systems, and network such as computers, smartphones, software, and the internet that help create, store, process, and share information.</p>
+                </fieldset>
+            </fieldset>
+        </div>
     </div>
 </body>
 </html>
