@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Text Activity</title>
+
+  <style>
+    body { font-family: Arial, sans-serif; }
+
+    h2 {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .parts_card {
+        padding: 20px;
+        margin: 20px;
+
+    }
+    .part {
+        text-align: center;
+        border: 2px solid maroon;
+        margin: 10px 10px;
+        padding: 10px 25px;
+    }
+    #part-b {
+        margin: 0;
+        color: maroon;
+    }
+    
+    /* part c */
+    .left { text-align: left; }
+    .right { text-align: right; }
+    .center { text-align: center; }
+    .justify { text-align: justify; }
+
+    /* part d */
+    .underline { text-decoration-line: underline; } 
+    .overline { text-decoration-line: overline; } 
+    .strike { text-decoration-line: line-through; } 
+    .none { text-decoration-line: none; }
+
+    /* part e  */
+    p.solid  { text-decoration-line: underline; text-decoration-style: solid; } 
+    p.double { text-decoration-line: underline; text-decoration-style: double; } 
+    p.dotted { text-decoration-line: underline; text-decoration-style: dotted; } 
+    p.dashed { text-decoration-line: underline; text-decoration-style: dashed; } 
+    p.wavy   { text-decoration-line: underline; text-decoration-style: wavy; } 
+    p.part-e-shorthand {text-decoration: underline maroon wavy 3px; }
+
+    /* part f */
+    .upper { text-transform: uppercase; } 
+    .lower { text-transform: lowercase; } 
+    .capitalize { text-transform: capitalize; } 
+    .normal { text-transform: none; }
+  </style>
+</head>
+<body>
+    
+
+
+    <div class="main">
+
+    <hr>
+        <div class="part">
+            <h1>My CSS Text Activity</h1>
+            <p>CSS can change how text looks how it is arranged.</p>
+        </div>
+    </div>
+    <hr>
+
+    <div class="parts_card">
+        <div class="part">
+            <h2>>- PART - B -<<br>CSS Text Basics</h2>
+            <p id="part-b">part - b basic text formatting</p>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - C -<<br>Text Alignment</h2>
+            <p class="left">-Left aligned</p> 
+            <p class="right">Right aligned-</p> 
+            <p class="center">-Centered-</p> 
+            <p class="justify">This is a longer paragraph. Add enough words to observe justified text.</p>
+        </div>
+        <div class="part">
+            <h2>>- PART - D -<<br>Text Decorations</h2>
+            <p class="underline">Underline</p>
+            <p class="overline">Overline</p>
+            <p class="strike">Line-through</p>
+            <p class="none">None</p>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - E -<<br>Text Decoration Styles</h2>
+            <P class="solid">Solid</P>
+            <P class="double">Double</P>
+            <P class="dotted">Dotted</P>
+            <P class="dashed">Dashed</P>
+            <P class="wavy">Wavy</P>
+
+            <p class="part-e-shorthand"> - Shorthand version from  the pdf - </p>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - F -<<br>Text Transformation</h2>
+            <p class="upper">Upper</p> 
+            <p class="lower">Lower</p>
+            <p class="capitalize">capitalize</p>
+            <p class="normal">Normal</p>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - G -<<br>Text Spacing</h2>
+
+        </div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
