@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradients Activity</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+
+        #bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: blur() brightness(1);
+            transform: scale(1.05) rotate(-1deg);
+            animation: background-fade-in 4.5s ease forwards;
+            z-index: -1;
+        }
+        /* pasikat na animation para sa bg image haha */
+        @keyframes background-fade-in {
+            to {
+                filter: blur(5px) brightness(0.9);
+            }
+        }
+
+        .main {
+            background: rgba(26, 9, 51, 0.45);
+            place-self: center;
+            color: #ffffff;
+            text-align: center;
+            font-family: Impact, sans-serif;
+            letter-spacing: 1.5px;
+            padding: 18px 40px;
+            width: fit-content;
+            margin-top: 50px;
+            border-radius: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    .parts_card {
+        color: #ffffff;
+        place-self: center;
+        border-top: 2px solid rgba(255, 255, 255, 0.3);
+        border-left: 2px solid rgba(255, 255, 255, 0.3);
+        width: 90%;
+        margin: 50px; 
+        box-sizing: border-box;
+        padding: 40px 20px;
+        border-style: none;
+        
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        /* border-style: double; */
+    }
+    .part {
+        place-self: center;
+        text-align: center;
+        border: 3px solid rgba(255, 255, 255, 0.3); 
+        border-style: double;
+        width: 90%;
+        margin: 50px; 
+        box-sizing: border-box;
+        padding: 30px;
+        border-radius: 30px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        margin: 30px;
+        padding: 10px 25px;
+    }
+    h2 {
+        text-align: center;
+        display: inline-block;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        font-family: Impact, sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        background: rgba(26, 9, 51, 0.2);
+        border-radius: 20px;
+        border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-style: none;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        width: fit-content;
+    }
+    h3 {
+        text-align: center;
+        display: inline-block;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        font-family: Impact, sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        background: rgba(26, 9, 51, 0.2);
+        border-radius: 20px;
+        border-top: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-left: 1.5px solid rgba(255, 255, 255, 0.3);
+        border-style: none;
+        padding: 10px 20px;
+        margin-bottom: 15px;
+        width: fit-content;
+    }
+
+    /* part a */
+        .demo { 
+        min-height: 120px; 
+        padding: 10px; 
+        margin: 10px; 
+        border-radius: 12px; 
+        color: #222; 
+        background: linear-gradient(to right, maroon, pink); 
+    } 
+    
+    /* part b */
+    .demo-part-b-1 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        border-radius: 12px; 
+        color: #222;
+        background: linear-gradient(to right, maroon, pink); 
+    }
+    .demo-part-b-2 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        color: #222;
+        border-radius: 12px; 
+        background: linear-gradient(to right, navy, skyblue); 
+    }
+    .demo-part-b-3 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        border-radius: 12px; 
+        color: #222;
+        background: linear-gradient(45deg, orange, gold);  
+    }
+    .demo-part-b-4 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        border-radius: 12px;
+        color: #222;
+        background: linear-gradient(to right, maroon, white, gold);
+    }
+    .demo-part-b-activity-1 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        border-radius: 12px; 
+        color: #222;
+        background: linear-gradient(to left, maroon, pink); 
+    }
+    .demo-part-b-activity-2 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        border-radius: 12px; 
+        color: #222;
+        background: linear-gradient(to right, rgb(44, 28, 188), rgb(119, 27, 161), rgb(190, 73, 18)); 
+    }
+    .demo-part-b-activity-3 {
+        min-height: 120px; 
+        padding: 20px; 
+        margin: 14px 0; 
+        border-radius: 12px; 
+        color: #222;
+        background: linear-gradient(to right, maroon 20%, pink 80%); 
+    }
+
+    /* part c */
+    .radial-demo { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 150px;
+        height: 150px;
+        padding: 20px; 
+        border-radius: 50%;
+        color: #222;
+        background: radial-gradient(circle, white, maroon);
+    }
+    .variations-holder {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        color: #222;
+    }
+    .radial-demo-1 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 150px;
+        height: 150px;
+        padding: 20px; 
+        border-radius: 50%;
+        background: radial-gradient(circle, yellow, orange, red); 
+    }
+    .radial-demo-2 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 150px;
+        height: 150px;
+        padding: 20px; 
+        border-radius: 50%;
+        background: radial-gradient(ellipse at top left, white, teal);
+    }
+    .radial-demo-3 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 150px;
+        height: 150px;
+        padding: 20px; 
+        border-radius: 50%;
+        background: radial-gradient(circle at center, gold 10%, maroon 70%);
+    }
+
+    /* part d */
+    .conic-demo { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red); 
+    } 
+    .conic-demo-1 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(maroon, pink, gold, maroon);     
+    }
+    .conic-demo-2 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(from 90deg, red, yellow, lime, blue, red);     
+    }
+    .conic-demo-3 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(red 0deg 90deg, yellow 90deg 180deg, lime 180deg 270deg, blue 270deg 360deg);
+    }
+    .conic-demo-activity-1 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(from 90deg, red, yellow, lime, blue, red);     
+    }
+    .conic-demo-activity-2 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(red, yellow, lime, blue, red);     
+    }
+    .conic-demo-activity-3 { 
+        place-self: center;
+        text-align: center;
+        align-content: center;
+        width: 180px; 
+        height: 180px; 
+        margin: 18px auto; 
+        border-radius: 50%;
+        color: #222; 
+        background: conic-gradient(red, yellow, lime, blue, red);     
+    }
+
+    /* part e */
+    section {
+        color: #222;
+    }
+    .card { 
+        padding: 22px; 
+        margin: 16px 0; 
+        border-radius: 14px; 
+        min-height: 90px;
+    } 
+    .linear-card {
+        background: linear-gradient(120deg, #800020, #f4c2c2);
+    } 
+    .radial-card {
+        background: radial-gradient(circle, #fff4cc, #d97706); 
+    } 
+    .conic-card {
+        background: conic-gradient(from 45deg, #800020, #f4c2c2, #f5c542, #800020); 
+    }
+    </style>
+</head>
+<body>
+    <img src="images/bg4.jpg" alt="Background Image" id="bg-image">
+
+    <div class="main">
+            <h1>My CSS Gradients Activity</h1>
+            <p>Gradients blend colors to make webpages more engaging</p>
+    </div>
+    
+
+    <div class="parts_card">
+        
+<!-- part a  -->
+        <div class="part">
+            <h2>>- PART - A -<<br>Create Starter Page</h2>
+            <p>Demo of creating a basic HTML page with CSS styling.</p>
+            <div class="demo">My first gradient will go here.</div> 
+        </div>
+
+<!-- part b -->
+        <div class="part">
+            <h2>>- PART - B -<<br>Linear Gradients</h2>
+            <p>A linear gradient blends colors along a line</p>
+
+            <div class="demo-part-b-1">Linear gradient demo</div>
+            
+            <h3>More Variations</h3>
+            <div class="demo-part-b-2">Navy to Skyblue</div>
+            <div class="demo-part-b-3">Orange to Gold</div>
+            <div class="demo-part-b-4">Maroon to White to Gold</div>
+            
+            <h3>Activity</h3>
+            <p>- Change the direction to to left. What changes?</p>
+            <div class="demo-part-b-activity-1">Changed the direction to to left</div> 
+            <p>- Use three colors of your choice in one gradient. </p>
+            <div class="demo-part-b-activity-2">My gradient with three colors</div>
+            <p>- Try a color stop, for example: linear-gradient(to right, maroon 20%, pink 80%)</p>
+            <div class="demo-part-b-activity-3" >My gradient with color stops</div>
+        </div>
+
+<!-- part c -->
+        <div class="part">
+            <h2>>- PART - C -<<br>Radial Gradients</h2>
+            <p>A radial gradient spreads from a center point.</p>
+            <div class="radial-demo">Radial gradient demo</div>
+
+            <h3>More Variations</h3>
+            <div class="variations-holder">
+            <div class="radial-demo-1">Radial gradient demo 1</div>
+            <div class="radial-demo-2">Radial gradient demo 2</div>
+            <div class="radial-demo-3">Radial gradient demo 3</div>
+            </div>
+        </div>
+
+<!-- part d -->
+        <div class="part">
+            <h2>>- PART - D -<<br>Conic Gradients</h2>
+            <p>A conic gradient rotates color transitions around a center point.</p>
+            <div class="conic-demo">Conic gradient demo</div>
+
+            <h3>More Variations</h3>
+            <div class="variations-holder">
+            <div class="conic-demo-1">Conic gradient demo 1</div>
+            <div class="conic-demo-2">Conic gradient demo 2</div>
+            <div class="conic-demo-3">Conic gradient demo 3</div>
+            </div>
+
+            <h3>Activity</h3>
+            <p>- Change the starting angle using from 90deg.</p>
+            <div class="conic-demo-activity-1"></div>
+            <p>- Create a four-color wheel using red, yellow, green, and blue..</p>
+            <div class="conic-demo-activity-2"></div>
+            <p>Adjust the width and height. Keep them equal to maintain a circle.</p>
+            <div class="conic-demo-activity-3"></div>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - E -<<br>Compare the Three Gradient Types</h2>
+            <p>Create three labeled sections on your page: Linear, Radial, and Conic. Each should have a different gradient. </p>
+
+            <section class="card linear-card"> 
+                <h2>Linear Gradient</h2> 
+                <p>Color changes along a straight line.</p> 
+            </section> 
+
+            <section class="card radial-card"> 
+                <h2>Radial Gradient</h2> 
+                <p>Color spreads outward from a center point.</p> 
+            </section> 
+
+            <section class="card conic-card"> 
+                <h2>Conic Gradient</h2> 
+                <p>Color changes around a center point.</p> 
+            </section> 
+        </div>
+
+        <div class="part">
+            <h2>>- PART - F -<<br>Text Transformation</h2>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - G -<<br>Text Spacing</h2>
+        </div>
+
+        <div class="part">
+            <h2>>- PART - H -<<br>Text Shadow</h2>
+        </div>
+    </div>  
+</body>
+</html>
