@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists Activity</title>
+    <style>
+        #bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: blur() brightness(1);
+            transform: scale(1.05) rotate(-1deg);
+            animation: background-fade-in 4.5s ease forwards;
+            z-index: -1;
+        }
+        /* pasikat na animation para sa bg image haha */
+        @keyframes background-fade-in {
+            to {
+                filter: blur(5px) brightness(0.9);
+            }
+        }
+        
+        /* part a / main */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 24px; 
+            background: #f7f3f4; 
+            color: #222; 
+            } 
+
+        .main {
+            background: rgba(26, 9, 51, 0.45);
+            place-self: center;
+            color: #ffffff;
+            text-align: center;
+            font-family: Impact, sans-serif;
+            letter-spacing: 1.5px;
+            padding: 18px 40px;
+            width: fit-content;
+            margin-top: 50px;
+            border-radius: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .parts-card {
+            color: #ffffff;
+            place-self: center;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            width: 90%;
+            max-width: 1500px;
+            margin: 50px; 
+            box-sizing: border-box;
+            padding: 20px 10px;
+            border-style: none;
+            
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            /* border-style: double; */
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+
+        }
+        .part {
+            place-self: center;
+            text-align: center;
+            border: 3px solid rgba(255, 255, 255, 0.3); 
+            border-style: double;
+            width: 90%;
+            margin: 50px; 
+            box-sizing: border-box;
+            padding: 30px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            margin: 30px;
+            padding: 20px;
+        }
+        h1. {
+
+        }
+        .tagline {
+        display: block;
+        font-size: 0.8em;
+        font-weight: normal;
+        color: #9b9a9a;  
+        margin-top: 0px;
+        }
+        .list-examples {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            border-radius: 20px;
+            gap: 10px;
+        }
+        .example {
+            width: 45%;
+            padding: 10px;
+            border-radius: 20px;
+            background: rgba(26, 9, 51, 0.45);
+        }
+
+        /* part c */
+        ul.circle-list { list-style-type: circle; } 
+        ul.square-list { list-style-type: square; } 
+        ol.roman-list { list-style-type: upper-roman; } 
+        ol.alpha-list { list-style-type: lower-alpha; } 
+
+        /* part d */
+        .outside-list { list-style-position: outside; } 
+        .inside-list { list-style-position: inside; } 
+    </style>
+</head>
+<body>
+
+    <img src="images/bg4.jpg" alt="Background Image" id="bg-image">
+
+    <div class="main">
+        <h1>My CSS Lists Activity<span class="tagline"> - Part 1 - </span></h1>
+        <p>HTML lists organize information. CSS changes how list markers and items look.</p>
+    </div>
+
+    <div class="parts-card">
+        <!-- part a -->
+        <div class="part">
+            <h1>Creating the Starter Page<span class="tagline"> - Part 1 - </span></h1>
+
+            <h2>My Favorite ICT Topics</h2> 
+            <ul> 
+            <li>Web Design</li> 
+            <li>Computer Hardware</li> 
+            <li>Programming</li> 
+            </ul> 
+        </div>
+
+        <!-- part b -->
+        <div class="part">
+            <h1>Ordered and Unordered Lists
+                <span class="tagline"> - Part B - </span></h1>
+            <p> - An unordered list uses &lt;ul&gt; and normally displays bullets. An ordered list uses &lt;ol&gt; and normally displays numbers or 
+letters. Each item belongs inside an &lt;li&gt; element.</p>
+            
+            <div class="list-examples">
+                <div class="example">
+                    <h3>Unordered List Example:</h3>
+                    <ul>
+                        <li>Item 1</li>
+                        <li>Item 2</li>
+                        <li>Item 3</li>
+                    </ul>
+                </div>
+                <div class="example">
+                    <h3>Ordered List Example:</h3>
+                    <ol>
+                        <li>First Item</li>
+                        <li>Second Item</li>
+                        <li>Third Item</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- part c -->
+        <div class="part">
+            <h1> Change Markers with list-style-type<span class="tagline"> - Part C - </span></h1>
+            <p> - This property changes the marker shape or numbering style. Add these rules inside &lt;style&gt;:</p>
+
+            <h3>Marker Examples:</h2> 
+            <div class="list-examples">
+                <div class="example"> 
+                        <ul class="circle-list"><li>Circle marker</li><li>Circle marker</li></ul> 
+                </div>
+                <div class="example">
+                        <ul class="square-list"><li>Square marker</li><li>Square marker</li></ul> 
+                </div>
+                <div class="example">
+                        <ol class="roman-list"><li>Roman numeral</li><li>Roman numeral</li></ol> 
+                </div>
+                <div class="example">
+                        <ol class="alpha-list"><li>Lowercase letter</li><li>Lowercase letter</li></ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- part d -->
+        <div class="part">
+            <h1>Marker Position: inside and outside<span class="tagline"> - Part D - </span></h1>
+            <p>list-style-position controls where the marker sits. The default is outside.</p>
+
+            <div class="list-examples">
+                <ul> 
+                    <div class="example">
+                    <li class="outside-list"> (outside list) This is a longer list item that may wrap onto another line so you can compare marker placement.</li>
+                    </div>
+                </ul> 
+                <ul>
+                    <div class="example"> 
+                    <li class="inside-list"> (inside list) This is a longer list item that may wrap onto another line so you can compare marker placement.</li>
+                    </ul>
+                </ul>
+            </div>
+        </div>
+
+        <!-- part e -->
+        
+    </div>
+</body>
+</html>
