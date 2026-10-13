@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechPro ICT Showcase - CSS Layout Lab</title>
+<style>
+    /* Dark Matter Glassmorphism Theme */
+    body { 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        background: #11052C; 
+        color: #ffffff; 
+        line-height: 1.6; 
+        padding-bottom: 80px; 
+    } 
+
+    header { 
+        background: rgba(107, 16, 36, 0.85); 
+        color: white; 
+        padding: 24px; 
+        text-align: center; 
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+        font-family: Impact, sans-serif;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        margin: 0;
+    }
+
+    main { padding: 20px; max-width: 900px; margin: 0 auto; }
+
+    .part {
+        background: rgba(26, 9, 51, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        margin: 30px auto; 
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .tagline {
+        display: block;
+        font-size: 0.8em;
+        font-weight: normal;
+        color: #9b9a9a;  
+        margin-top: 5px;
+    }
+
+    h2 {
+        font-family: Impact, sans-serif;
+        letter-spacing: 1px;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+    }
+
+    /* PDF Required Classes & Lab Components */
+    .demo { 
+        padding: 12px; 
+        margin: 12px 0; 
+        border: 2px solid #CE99FF; 
+        background: rgba(43, 16, 82, 0.4); 
+        border-radius: 8px;
+    }
+
+    .offset-box { 
+        position: relative; 
+        left: 25px; 
+        top: 10px; 
+        border-color: #9b51e0;
+        background: rgba(89, 61, 131, 0.5);
+    }
+
+    /* Part B: Z-Index Stacking Area */
+    .layer-area { 
+        position: relative; 
+        height: 180px; 
+        margin: 20px 0; 
+        background: rgba(17, 5, 44, 0.6);
+        border: 1px dashed rgba(255, 255, 255, 0.3);
+        border-radius: 12px;
+    }
+
+    .layer-one { 
+        position: absolute; 
+        left: 10px; 
+        top: 10px; 
+        width: 150px; 
+        height: 90px; 
+        background: rgba(242, 198, 207, 0.85); 
+        color: #11052C;
+        z-index: 1; 
+        padding: 8px; 
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .layer-two { 
+        position: absolute; 
+        left: 70px; 
+        top: 40px; 
+        width: 150px; 
+        height: 90px; 
+        background: rgba(229, 180, 93, 0.85); 
+        color: #11052C;
+        z-index: 2; 
+        padding: 8px; 
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    .layer-three { 
+        position: absolute; 
+        left: 130px; 
+        top: 70px; 
+        width: 150px; 
+        height: 90px; 
+        background: rgba(185, 217, 197, 0.85); 
+        color: #11052C;
+        z-index: 3; 
+        padding: 8px; 
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    /* Part C & D: Float and Clearfix */
+    .article { 
+        border: 1px solid rgba(255, 255, 255, 0.3); 
+        padding: 16px; 
+        background: rgba(35, 12, 70, 0.4);
+        border-radius: 12px;
+        margin: 15px 0;
+    }
+
+    .photo-placeholder { 
+        float: left; 
+        width: 110px; 
+        height: 90px; 
+        margin: 0 14px 8px 0; 
+        background: #f2c6cf; 
+        color: #11052C;
+        border: 2px solid #6b1024; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        font-weight: bold; 
+        border-radius: 8px;
+    }
+
+    .after-float { 
+        clear: both; 
+        margin-top: 16px; 
+        padding: 12px; 
+        background: rgba(59, 20, 91, 0.6); 
+        border: 1px solid #CE99FF;
+        border-radius: 8px;
+    }
+
+    /* Clearfix implementation */
+    .clearfix::after { 
+        content: ""; 
+        clear: both; 
+        display: table; 
+    }
+
+    /* Mini-Project Feature Card & Absolute Label */
+    .feature-card {
+        position: relative;
+        border: 2px solid #CE99FF;
+        padding: 20px;
+        margin: 20px 0;
+        background: rgba(43, 16, 82, 0.6);
+        border-radius: 12px;
+        min-height: 100px;
+    }
+
+    .featured-label {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background: #6b1024;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-weight: bold;
+        border: 1px solid #CE99FF;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>TechPro ICT Showcase</h1>
+    <p>CSS Offsets, Z-Index, Float, and Clear Practice Lab</p>
+</header>
+
+<main>
+    <!-- PART A & B -->
+    <div class="part">
+        <h2>OFFSETS AND LAYERS<span class="tagline"> - Part A & B - </span></h2>
+        <div class="demo">Box A (Static)</div>
+        <div class="demo offset-box">Box B (Relative offset: left 25px, top 10px)</div>
+        <div class="demo">Box C (Normal flow)</div>
+
+        <p style="margin-top: 20px;"><b>Z-Index Layering Test:</b></p>
+        <div class="layer-area">
+            <div class="layer-one">Layer One (z-index: 1)</div>
+            <div class="layer-two">Layer Two (z-index: 2)</div>
+            <div class="layer-three">Layer Three (z-index: 3)</div>
+        </div>
+    </div>
+
+    <!-- PART C & D -->
+    <div class="part">
+        <h2>FLOAT, CLEAR, AND CLEARFIX<span class="tagline"> - Part C & D - </span></h2>
+        
+        <div class="article clearfix">
+            <div class="photo-placeholder">PHOTO</div>
+            <p>During our recent computer laboratory session at Quirino High School, ICT students explored advanced CSS layout techniques. We learned how floating elements allow inline content and text to wrap seamlessly around images and media boxes.</p>
+            <p>We also experimented with tools like Visual Studio Code, analyzing how proper spacing and margin properties enhance the overall readability of our web pages.</p>
+        </div>
+
+        <div class="after-float">
+            This paragraph uses <code>clear: both</code>, ensuring it cleanly starts below the floated content without awkward side-by-side overlap[cite: 10, 12].
+        </div>
+    </div>
+
+    <!-- MINI-PROJECT: TECHPRO ICT SHOWCASE -->
+    <div class="part">
+        <h2>MINI-PROJECT: TECHPRO ICT SHOWCASE<span class="tagline"> - Mini-Project - </span></h2>
+        <p>Combining offsets, absolute badges, z-index layering, and floated layouts into a unified school technology page[cite: 11].</p>
+        
+        <div class="feature-card">
+            <span class="featured-label">FEATURED</span>
+            <h3>ICT Strand Student Portal</h3>
+            <p>Highlighting collaborative web development projects and mastery of CSS positioning mechanics.</p>
+        </div>
+    </div>
+
+</main>
+
+</body>
+</html>

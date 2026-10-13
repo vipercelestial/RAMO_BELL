@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Navigation Bar Activity</title>
+    <style>
+        #bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: blur() brightness(1);
+            transform: scale(1.05) rotate(-1deg);
+            animation: background-fade-in 4.5s ease forwards;
+            z-index: -1;
+        }
+        @keyframes background-fade-in {
+            to {
+                filter: blur(5px) brightness(0.9);
+            }
+        }
+        
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; 
+            background: #11052C; 
+            color: #ffffff; 
+        } 
+
+        header {
+            padding: 24px;
+            background: rgba(26, 9, 51, 0.7);
+            color: white;
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        header h1 {
+            font-family: Impact, sans-serif;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+            margin: 0;
+        }
+
+        .parts-card {
+            color: #ffffff;
+            place-self: center;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            width: 90%;
+            max-width: 1500px;
+            margin: 40px auto; 
+            box-sizing: border-box;
+            padding: 20px 10px;
+            border-style: none;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .part {
+            place-self: center;
+            text-align: center;
+            border: 3px solid rgba(255, 255, 255, 0.3); 
+            border-style: double;
+            width: 90%;
+            margin: 30px auto; 
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .tagline {
+            display: block;
+            font-size: 0.8em;
+            font-weight: normal;
+            color: #9b9a9a;  
+            margin-top: 5px;
+        }
+
+        h2 {
+            font-family: Impact, sans-serif;
+            letter-spacing: 1.5px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        }
+
+        /* part b */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Vertical Navigation */
+        .vertical-nav {
+            display: inline-block;
+            text-align: left;
+            margin: 15px auto;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .vertical-nav ul {
+            width: 240px;
+            background-color: rgba(26, 9, 51, 0.8);
+        }
+        .vertical-nav a {
+            display: block;
+            color: #ffffff;
+            padding: 10px 16px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .vertical-nav a:hover {
+            background-color: #593d83;
+            color: white;
+        }
+        .vertical-nav a.active {
+            background-color: #3b145b;
+            color: #CE99FF;
+            font-weight: bold;
+            border-left: 4px solid #CE99FF;
+        }
+
+        /* Horizontal Navigation */
+        .horizontal-nav {
+            margin: 15px auto;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            max-width: 600px;
+        }
+        .horizontal-nav ul {
+            display: flex;
+            justify-content: center;
+            background-color: #3b145b;
+        }
+        .horizontal-nav li {
+            border-right: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .horizontal-nav li:last-child {
+            border-right: none;
+        }
+        .horizontal-nav a {
+            display: block;
+            color: white;
+            padding: 14px 18px;
+            text-decoration: none;
+            text-align: center;
+            transition: background 0.3s ease;
+        }
+        .horizontal-nav a:hover {
+            background-color: #593d83;
+        }
+        .horizontal-nav a.active {
+            background-color: #1a0933;
+            color: #CE99FF;
+            font-weight: bold;
+        }
+
+        main { padding: 20px; }
+        section {
+            background: rgba(26, 9, 51, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            margin: 15px auto;
+            border-radius: 15px;
+            max-width: 600px;
+            text-align: left;
+        }
+
+        .code-box {
+            background: rgba(10, 3, 20, 0.6);
+            border: 1px solid rgba(206, 153, 255, 0.3);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-family: monospace;
+            text-align: left;
+            margin: 10px auto;
+            max-width: 650px;
+            font-size: 0.9em;
+            color: #CE99FF;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/bg4.jpg" alt="Background Image" id="bg-image">
+
+    <header>
+        <h1>My TechPro Website</h1>
+        <p>Practicing CSS Navigation Bars</p>
+    </header>
+
+    <div class="parts-card">
+
+        <!-- PART A -->
+        <div class="part">
+            <h2>CREATE THE STARTER PAGE<span class="tagline"> - Part A - </span></h2>
+            <p>Starter template structure established with standard header and main sections.</p>
+        </div>
+
+        <!-- PART B -->
+        <div class="part">
+            <h2>NAVIGATION BAR BASICS<span class="tagline"> - Part B - </span></h2>
+            <p>A navigation bar is a list of links that helps visitors move between pages or sections.</p>
+            
+            <nav aria-label="Main navigation">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#lessons">Lessons</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- PART C -->
+        <div class="part">
+            <h2>CREATE A VERTICAL NAVIGATION BAR<span class="tagline"> - Part C - </span></h2>
+            <p>A vertical navigation bar stacks links one below another, often along the side of a page.</p>
+            <nav class="vertical-nav" aria-label="Vertical navigation">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#lessons">Lessons</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- PART D -->
+        <div class="part">
+            <h2>CREATE A HORIZONTAL NAVIGATION BAR<span class="tagline"> - Part D - </span></h2>
+            <p>A horizontal navigation bar places links next to each other, commonly near the top of a webpage. (<code>display: flex</code>).</p>
+            <nav class="horizontal-nav" aria-label="Horizontal navigation">
+                <ul>
+                    <li><a class="active" href="#home">Home</a></li>
+                    <li><a href="#lessons">Lessons</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- PART E -->
+        <div class="part">
+            <h2>LINK STATES AND BORDERS<span class="tagline"> - Part E - </span></h2>
+            <p>The :hover pseudo-class styles a link while the pointer is over it.</code> and handled <code>:last-child</code>.</p>
+            <p>Task: Make sure the active link is easy to identify. Test every link and confirm that it jumps to the matching section.</p>
+            <p style="color: #CE99FF; font-style: italic; font-size: 0.9em;" >
+     - ✓ Status: Part E Tested — Dividers, hover effects, and section jumps confirmed working.
+            </p>
+        </div>
+
+        <!-- PART F -->
+        <div class="part">
+            <h2>CONNECT LINKS TO PAGE SECTIONS<span class="tagline"> - Part F - </span></h2>
+            <main>
+                <section id="home">
+                    <h2>Home</h2>
+                    <p>Welcome to our TechPro learning page.</p>
+                </section>
+                <section id="lessons">
+                    <h2>Lessons</h2>
+                    <p>We practice HTML and CSS in Visual Studio Code.</p>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <p>We create simple webpages and design activities.</p>
+                </section>
+                <section id="about">
+                    <h2>About</h2>
+                    <p>This page is a CSS navigation practice activity.</p>
+                </section>
+            </main>
+        </div>
+
+        <!-- PART G -->
+        <div class="part">
+            <h2>MINI PROJECT: TECHPRO LEARNING PORTAL<span class="tagline"> - Part G - </span></h2>
+            <p>Build a one-page “TechPro Learning Portal” that includes all requirements below:</p>
+
+            <div style="background: rgba(26, 9, 51, 0.6); border: 1px solid #CE99FF; padding: 15px; border-radius: 12px; margin-top: 15px; text-align: left;">
+                <h3 style="color: #CE99FF; margin-top: 0;">✓ Part G Checklist Completed: TechPro Learning Portal</h3>
+                <ul style="list-style-type: disc; padding-left: 20px; color: #ffffff; margin-bottom: 0;">
+                    <li>Header with website title applied.</li>
+                    <li>Horizontal navigation bar (4+ links) with active & hover states.</li>
+                    <li>Vertical navigation sidebar (3+ links) integrated.</li>
+                    <li>Section jumping (<code>href="#id"</code>) fully functional.</li>
+                    <li>Strong color contrast and clear layout spacing checked.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PART H -->
+        <div class="part">
+            <h2>CHALLENGE TASK<span class="tagline"> - Part H - </span></h2>
+            <p>Designed a custom ICT Club theme with dual top horizontal and side vertical navigation systems.</p>
+
+<!-- Top Horizontal Menu -->
+    <nav class="horizontal-nav" aria-label="QHS Horizontal Navigation">
+        <ul>
+            <li><a class="active" href="https://qhs.depedqc.ph" target="_blank">School Page</a></li>
+            <li><a href="https://qhs.depedqc.ph/about-us/vision-mission" target="_blank">Vision & Mission</a></li>
+            <li><a href="https://qhs.depedqc.ph/qhs-fb-page" target="_blank">School FB Page</a></li>
+            <li><a href="https://qhs.depedqc.ph/school-papers" target="_blank">School Papers</a></li>
+        </ul>
+    </nav>
+    
+        <!-- Side Vertical Menu -->
+        <nav class="vertical-nav" aria-label="QHS Vertical Navigation" style="margin-top: 20px;">
+            <ul>
+                <li><a class="active" href="https://qhs.depedqc.ph" target="_blank">School Page</a></li>
+                <li><a href="https://qhs.depedqc.ph/about-us/vision-mission" target="_blank">Vision & Mission</a></li>
+                <li><a href="https://qhs.depedqc.ph/qhs-fb-page" target="_blank">School FB Page</a></li>
+                <li><a href="https://qhs.depedqc.ph/school-papers" target="_blank">School Papers</a></li>
+            </ul>
+        </nav>
+            
+            <p style="margin-top: 15px; color: #CE99FF; text-align: left; background: rgba(26, 9, 51, 0.5); padding: 12px; border-radius: 10px;">
+                <b>Explanation (Vertical vs Horizontal Menu):</b><br>
+                A vertical menu is ideal when dealing with numerous nested navigation options, sidebars, or dashboards where vertical screen real estate is abundant, as it keeps long lists structured and easy to scan vertically.
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>

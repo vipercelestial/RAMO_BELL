@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Links Activity</title>
+    <style>
+        #bg-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            filter: blur() brightness(1);
+            transform: scale(1.05) rotate(-1deg);
+            animation: background-fade-in 4.5s ease forwards;
+            z-index: -1;
+        }
+        @keyframes background-fade-in {
+            to {
+                filter: blur(5px) brightness(0.9);
+            }
+        }
+        
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 24px; 
+            background: #11052C; 
+            color: #ffffff; 
+        } 
+
+        .main {
+            background: rgba(26, 9, 51, 0.45);
+            place-self: center;
+            color: #ffffff;
+            text-align: center;
+            font-family: Impact, sans-serif;
+            letter-spacing: 1.5px;
+            padding: 18px 40px;
+            width: fit-content;
+            margin: 50px auto 0 auto;
+            border-radius: 30px;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .parts-card {
+            color: #ffffff;
+            place-self: center;
+            border-top: 2px solid rgba(255, 255, 255, 0.3);
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            width: 90%;
+            max-width: 1500px;
+            margin: 50px auto; 
+            box-sizing: border-box;
+            padding: 20px 10px;
+            border-style: none;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        }
+
+        .part {
+            place-self: center;
+            text-align: center;
+            border: 3px solid rgba(255, 255, 255, 0.3); 
+            border-style: double;
+            width: 90%;
+            margin: 30px auto; 
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 30px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .tagline {
+            display: block;
+            font-size: 0.8em;
+            font-weight: normal;
+            color: #9b9a9a;  
+            margin-top: 5px;
+        }
+
+        h2 {
+            font-family: Impact, sans-serif;
+            letter-spacing: 1px;
+            color: #ffffff;
+            text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        }
+
+        /* --- Text Links Styling --- */
+        a.text-link:link {
+            color: #CE99FF;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        a.text-link:visited {
+            color: #b388ff;
+        }
+        a.text-link:hover {
+            color: #ffffff;
+            background-color: rgba(206, 153, 255, 0.3);
+            text-decoration: underline;
+            box-shadow: 0 0 10px #CE99FF;
+        }
+        a.text-link:active {
+            color: #ffffff;
+            background-color: #593d83;
+        }
+
+        /* --- Link Buttons Styling --- */
+        .button-link {
+            display: inline-block;
+            background-color: rgba(26, 9, 51, 0.6);
+            color: #ffffff;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            margin: 6px;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(206, 153, 255, 0.2);
+        }
+        .button-link:link,
+        .button-link:visited {
+            color: #ffffff;
+        }
+        .button-link:hover {
+            background-color: #ffffff;
+            color: #1a0933;
+            border-color: #CE99FF;
+            box-shadow: 0 0 15px #CE99FF;
+        }
+        .button-link:active {
+            background-color: #CE99FF;
+            color: #1a0933;
+        }
+
+        /* Optional Challenge: Secondary Button Style */
+        .button-link-secondary {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.85);
+            color: #1a0933;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            border: 2px solid #CE99FF;
+            border-radius: 15px;
+            margin: 6px;
+            font-weight: bold;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+        .button-link-secondary:link,
+        .button-link-secondary:visited {
+            color: #1a0933;
+        }
+        .button-link-secondary:hover {
+            background-color: rgba(26, 9, 51, 0.85);
+            color: #ffffff;
+            border-color: #ffffff;
+            box-shadow: 0 0 15px #CE99FF;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        /* Mini-project Fieldset & Legend */
+        fieldset {
+            border: 2px solid rgba(255, 255, 255, 0.3); 
+            background: transparent;
+            margin: 10px; 
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 20px;
+            color: #ffffff;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+        legend {
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(26, 9, 51, 0.45);
+            margin: 10px; 
+            box-sizing: border-box;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/bg4.jpg" alt="Background Image" id="bg-image">
+
+    <div class="main">
+        <h1>TechPro Learning Links<span class="tagline"> - CSS Activity Sheet - </span></h1>
+        <p>Styling hyperlinks, pseudo-class state selectors, and interactive link buttons.</p>
+    </div>
+
+    <div class="parts-card">
+
+        <!-- PART A -->
+        <div class="part">
+            <h2>GETTING STARTED<span class="tagline"> - Part A - </span></h2>
+            <p>Project setup in folder <code>CSS_Links_Activity</code> with <code>index.html</code> previewed in browser.</p>
+        </div>
+
+        <!-- PART B -->
+        <div class="part">
+            <h2>ACTIVITY 1 — STYLE TEXT LINKS<span class="tagline"> - Part B - </span></h2>
+            <p>Testing link states: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, and <code>:active</code>.</p>
+            <p style="margin-top: 15px;">
+                <a class="text-link" href="https://www.w3schools.com/" target="_blank">Visit W3Schools</a>
+            </p>
+        </div>
+
+        <!-- PART C -->
+        <div class="part">
+            <h2>ACTIVITY 2 — CREATE LINK BUTTONS<span class="tagline"> - Part C - </span></h2>
+            <p>Link elements formatted as interactive buttons using <code>display: inline-block</code>, padding, and hover transitions.</p>
+            
+            <div class="button-container">
+                <a class="button-link" href="https://www.w3schools.com/" target="_blank">Home</a>
+                <a class="button-link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
+                <a class="button-link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
+            </div>
+        </div>
+
+        <!-- PART D -->
+        <div class="part">
+            <h2>MINI-PROJECT - TECHPRO LEARNING LINKS<span class="tagline"> - Part D - </span></h2>
+            <fieldset>
+                <legend align="center">TechPro Learning Links Hub</legend>
+                <p>Welcome to TechPro Learning Links! Explore official resources below[cite: 19]:</p>
+                <p style="margin: 15px 0;">
+                    Reference Text Link: 
+                    <a class="text-link" href="https://www.w3schools.com/" target="_blank">Visit W3Schools Portal</a>
+                </p>
+
+                <div class="button-container">
+                    <a class="button-link" href="https://www.w3schools.com/" target="_blank">Home</a>
+                    <a class="button-link" href="https://www.w3schools.com/html/" target="_blank">Learn HTML</a>
+                    <a class="button-link" href="https://www.w3schools.com/css/" target="_blank">Learn CSS</a>
+                    <!-- Optional Challenge Secondary Button -->
+                    <a class="button-link-secondary" href="https://www.w3schools.com/js/" target="_blank">Learn JavaScript</a>
+                </div>
+            </fieldset>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Positioning Lab & TechPro Learning Portal</title>
+<style>
+    /* Dark Matter Glassmorphism Theme */
+    body { 
+        font-family: Arial, sans-serif; 
+        margin: 0; 
+        background: #11052C; 
+        color: #ffffff; 
+        line-height: 1.6; 
+        padding-bottom: 80px; 
+    } 
+
+    header { 
+        background: rgba(26, 9, 51, 0.8); 
+        color: white; 
+        padding: 24px; 
+        text-align: center; 
+        border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+        font-family: Impact, sans-serif;
+        letter-spacing: 1.5px;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+        margin: 0;
+    }
+
+    main { padding: 20px; max-width: 900px; margin: 0 auto; }
+
+    .part {
+        background: rgba(26, 9, 51, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        width: 100%;
+        margin: 30px auto; 
+        box-sizing: border-box;
+        padding: 20px;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .tagline {
+        display: block;
+        font-size: 0.8em;
+        font-weight: normal;
+        color: #9b9a9a;  
+        margin-top: 5px;
+    }
+
+    h2 {
+        font-family: Impact, sans-serif;
+        letter-spacing: 1px;
+        color: #ffffff;
+        text-shadow: 0 0 10px #CE99FF, 0 0 20px #593d83;
+    }
+
+    /* PDF Required Classes & Elements */
+    .demo-box { 
+        padding: 12px; 
+        margin: 12px 0; 
+        border: 2px solid #CE99FF; 
+        background: rgba(43, 16, 82, 0.4); 
+        border-radius: 8px;
+    }
+
+    .relative-box { 
+        position: relative; 
+        left: 30px; 
+        top: 10px; 
+        border-color: #9b51e0;
+    }
+
+    .position-card { 
+        position: relative; 
+        min-height: 120px; 
+        border: 2px solid rgba(255, 255, 255, 0.3); 
+        padding: 16px; 
+        margin: 20px 0; 
+        background: rgba(26, 9, 51, 0.6);
+        border-radius: 12px;
+    }
+
+    .absolute-tag { 
+        position: absolute; 
+        top: 8px; 
+        right: 8px; 
+        background: #593d83; 
+        color: white; 
+        padding: 4px 8px; 
+        border-radius: 6px;
+        font-weight: bold;
+        border: 1px solid #CE99FF;
+    }
+
+    .help-button { 
+        position: fixed; 
+        right: 16px; 
+        bottom: 16px; 
+        background: #3b145b; 
+        color: #CE99FF; 
+        border: 2px solid #CE99FF;
+        padding: 10px 14px; 
+        text-decoration: none; 
+        border-radius: 8px; 
+        font-weight: bold;
+        z-index: 1000;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .help-button:hover {
+        background: #593d83;
+        color: #ffffff;
+    }
+
+    .sticky-heading { 
+        position: sticky; 
+        top: 0; 
+        background: rgba(26, 9, 51, 0.95); 
+        padding: 12px; 
+        border-bottom: 2px solid #CE99FF; 
+        z-index: 100;
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+    }
+
+    .sticky-nav {
+        position: sticky;
+        top: 0;
+        background: rgba(17, 5, 44, 0.95);
+        padding: 12px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid rgba(206, 153, 255, 0.3);
+        z-index: 200;
+        backdrop-filter: blur(10px);
+    }
+    .sticky-nav a {
+        color: #CE99FF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .sticky-nav a:hover {
+        color: #ffffff;
+        text-decoration: underline;
+    }
+
+    .profile-card {
+        position: relative;
+        background: rgba(35, 12, 70, 0.6);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        padding: 20px;
+        border-radius: 12px;
+        margin: 20px 0;
+    }
+
+    .notification-badge {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background: #ff4757;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 50%;
+        font-size: 0.8em;
+        font-weight: bold;
+        box-shadow: 0 0 10px #ff4757;
+    }
+
+    .z-container {
+        position: relative;
+        height: 100px;
+        margin: 20px 0;
+    }
+    .z-box1 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 150px;
+        height: 60px;
+        background: rgba(89, 61, 131, 0.8);
+        border: 2px solid #CE99FF;
+        padding: 10px;
+        z-index: 1;
+        border-radius: 8px;
+    }
+    .z-box2 {
+        position: absolute;
+        top: 30px;
+        left: 50px;
+        width: 150px;
+        height: 60px;
+        background: rgba(155, 81, 224, 0.8);
+        border: 2px solid #ffffff;
+        padding: 10px;
+        z-index: 2;
+        border-radius: 8px;
+    }
+</style>
+</head>
+<body>
+
+<!-- Challenge Task: Sticky Navigation Bar -->
+<nav class="sticky-nav">
+    <span><b>TechPro Lab</b></span>
+    <div>
+        <a href="#top">Top</a> |
+        <a href="#portal">Portal</a> |
+        <a href="#challenge">Challenge</a>
+    </div>
+</nav>
+
+<header id="top">
+    <h1>TechPro Positioning Lab</h1>
+    <p>Explore how CSS places elements on a page.</p>
+</header>
+
+<main>
+    <!-- PART A & B -->
+    <div class="part">
+        <h2>STATIC & RELATIVE POSITIONING<span class="tagline"> - Part A & B - </span></h2>
+        <div class="demo-box" style="position: static;">Box 1: Normal flow (position: static)</div>
+        <div class="demo-box relative-box">Box 2: Relative positioning (left: 30px, top: 10px)</div>
+        <div class="demo-box">Box 3: Another normal-flow box</div>
+    </div>
+
+    <!-- PART C -->
+    <div class="part">
+        <h2>ABSOLUTE POSITIONING<span class="tagline"> - Part C - </span></h2>
+        <p>An absolute element positioned inside a relative container:</p>
+        <div class="position-card">
+            <p>Positioned container (relative)</p>
+            <span class="absolute-tag">NEW</span>
+        </div>
+    </div>
+
+    <!-- PART E & STICKY -->
+    <div class="part">
+        <h2>STICKY HEADING & SCROLL PRACTICE<span class="tagline"> - Part E - </span></h2>
+        <h2 class="sticky-heading">Sticky Section Heading</h2>
+        <p>Practice paragraph 1. Observe how positioned elements behave when you scroll.</p>
+        <p>Practice paragraph 2. Keep experimenting with CSS values and offsets.</p>
+        <p>Practice paragraph 3. Add more paragraphs to make the page scroll smoothly.</p>
+        <p>Practice paragraph 4. Testing viewport behavior and scroll thresholds.</p>
+        <p>Practice paragraph 5. Ensuring all requirements for the lab are fully demonstrated.</p>
+    </div>
+
+    <!-- MINI-PROJECT: TECHPRO LEARNING PORTAL -->
+    <div class="part" id="portal">
+        <h2>MINI-PROJECT: TECHPRO LEARNING PORTAL<span class="tagline"> - Mini-Project - </span></h2>
+        <p>Demonstrating a polished portal layout with absolute featured label and comprehensive content blocks.</p>
+        <div class="position-card" style="min-height: 140px;">
+            <p><b>Featured TechPro Module:</b> Advanced CSS Layouts & Positioning</p>
+            <p>This card utilizes a relative container with an absolute positioned FEATURED badge.</p>
+            <span class="absolute-tag" style="background: #3b145b; color: #CE99FF;">FEATURED</span>
+        </div>
+        <p>Content block 1: Understanding normal flow vs positioning contexts.</p>
+        <p>Content block 2: Mastering viewport fixed positioning for utility buttons.</p>
+        <p>Content block 3: Implementing sticky headers for seamless user navigation.</p>
+        <p>Content block 4: Ensuring high contrast and readability across all screens.</p>
+        <p>Content block 5: Final review and verification of positioning lab criteria.</p>
+    </div>
+
+    <!-- CHALLENGE TASK -->
+    <div class="part" id="challenge">
+        <h2>CHALLENGE TASK<span class="tagline"> - Challenge Task - </span></h2>
+        <p>Profile card with absolute notification badge and z-index overlapping demonstration:</p>
+        
+        <div class="profile-card">
+            <span class="notification-badge">3</span>
+            <h3>Student Profile: TechPro ICT</h3>
+            <p>Status: Active & Enrolled in Quirino High School Grade 11.</p>
+        </div>
+
+        <p style="margin-top: 20px;"><b>Z-Index Overlap Test:</b> (Box 2 has a higher z-index than Box 1, appearing in front)</p>
+        <div class="z-container">
+            <div class="z-box1">Box 1 (z-index: 1)</div>
+            <div class="z-box2">Box 2 (z-index: 2)</div>
+        </div>
+    </div>
+</main>
+
+<!-- PART D: Fixed Help Button -->
+<a class="help-button" href="#top">Back to Top</a>
+
+</body>
+</html>
