@@ -1,0 +1,545 @@
+/* ==========================================================================
+   SECTION 1: GLOBAL STYLES & FONTS
+   ========================================================================== */
+body {
+    margin: 0;
+    background-color: #07070b;
+    color: #e0e0e6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'TekkenCustom';
+    src: url('fonts/tarrgetexpandital.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Helper Utilities */
+.hidden { display: none !important; }
+
+.fade-in {
+    animation: contentPopIn 0.8s ease forwards;
+}
+
+@keyframes contentPopIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ==========================================================================
+   SECTION 2: BOOT / SPLASH SCREEN STYLES
+   ========================================================================== */
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at center, #14141c 0%, #060609 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.8s ease, transform 0.8s ease, filter 0.8s ease;
+}
+
+.splash-content {
+    text-align: center;
+}
+
+.splash-title {
+    font-family: 'TekkenCustom', 'Impact', sans-serif;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.splash-title .highlight {
+    color: #ff003c;
+    font-style: italic;
+    text-shadow: 0 0 25px rgba(255, 0, 60, 0.8);
+}
+
+.splash-prompt {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 45px;
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+    color: #7a7a8e;
+    text-transform: uppercase;
+    animation: subtle-pulse 2s infinite ease-in-out;
+}
+
+@keyframes subtle-pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 0.8; color: #a0a0b8; }
+    100% { opacity: 0.3; }
+}
+
+.splash-credits {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    font-size: 0.65rem;
+    color: #4a4a5c;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.splash-credits p { margin: 0; }
+.splash-credits .version { color: #3a3a4c; font-size: 0.6rem; }
+
+#splash-screen.fade-out {
+    opacity: 0;
+    transform: scale(1.05);
+    filter: blur(10px);
+    pointer-events: none;
+}
+
+
+/* ==========================================================================
+   SECTION 3: HEADER & TOP NAVIGATION BAR
+   ========================================================================== */
+.tekken-header {
+    background: transparent;
+    border-bottom: 2px solid #22222f;
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(25px);
+}
+
+.header-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+/* Main Menu Title Screen Button */
+.main-menu-tab {
+    font-family: 'TekkenCustom', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-style: italic;
+    background: transparent;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    padding: 4px 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+}
+
+.main-menu-tab::after {
+    content: "Main Menu";
+}
+
+.main-menu-tab:hover {
+    color: #ff003c;
+    background: rgba(255, 0, 60, 0.08);
+}
+
+.main-menu-tab:hover::after {
+    content: "Title Screen?";
+}
+
+.tekken-player-tag {
+    background: transparent;
+    border: none;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+    color: #b2b2c7;
+}
+
+/* Nav Bar Row & L1/R1 PlayStation Badges */
+.tekken-top-nav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-top: 1px solid #1a1a24;
+    padding-top: 10px;
+}
+
+.nav-tab {
+    background: transparent;
+    color: #9a9ab0;
+    text-decoration: none;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.nav-tab:hover {
+    color: #ffffff;
+    background: #171722;
+}
+
+.nav-tab.active {
+    color: #ffffff;
+    background: #171722;
+    border-bottom: 3px solid #ff003c;
+}
+
+.ps-button {
+    background: rgba(233, 233, 240, 1);
+    color: #0b0b10;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 900;
+    padding: 4px 10px;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-transform: uppercase;
+}
+
+.ps-button small {
+    font-size: 0.6rem;
+    color: #4a4a5c;
+    font-weight: 700;
+}
+
+
+/* ==========================================================================
+   SECTION 4: CAROUSEL VIEWPORT & TRACK ARCHITECTURE
+   ========================================================================== */
+.pages-viewport {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.pages-track {
+    display: flex;
+    width: 400%; /* 4 Pages x 100% width */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.tekken-page {
+    width: 25%; /* 1 Page per Viewport */
+    flex-shrink: 0;
+    box-sizing: border-box;
+    background: rgba(15, 15, 20, 0.95);
+    border-left: 3px solid #ff003c;
+    border-right: 3px solid #2a2a38;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    min-height: 520px;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #22222f;
+    padding-bottom: 10px;
+}
+
+
+/* ==========================================================================
+   SECTION 5: PAGE 0 - TEKKEN 8 PROFILE & CHARACTER SELECT UI
+   ========================================================================== */
+#about.tekken-page {
+    background: linear-gradient(
+        135deg,
+        rgba(26, 10, 36, 0.92) 0%,
+        rgba(15, 15, 20, 0.95) 50%,
+        rgba(45, 8, 22, 0.92) 100%
+    );
+    border-left: 3px solid #ff003c;
+    border-right: 3px solid #cfac62;
+    box-shadow: 
+        0 0 30px rgba(186, 85, 211, 0.2),
+        0 0 15px rgba(255, 0, 60, 0.3);
+    position: relative;
+}
+
+.tekken-character-select-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* Kaliwang Column - Anchored to Bottom */
+.t8-character-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end; /* Itinutulak ang laman papuntang ibaba */
+    height: 100%;
+    gap: 10px;
+    padding-bottom: 10px;
+}
+
+/* Avatar Image sa Taas ng Info (Bottom Fade-out Gradient Mask) */
+.t8-avatar-container {
+    width: 100%;
+    max-height: 240px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.t8-avatar-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+/* T8 Tilted Name Text */
+.t8-char-name {
+    font-family: 'TekkenCustom', 'Orbitron', sans-serif;
+    font-size: 3.2rem;
+    font-weight: 900;
+    font-style: italic;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* T8 Rank Badge */
+.t8-rank-badge {
+    background: linear-gradient(135deg, #3a2c20 0%, #1a120c 100%);
+    border: 1px solid #8c6d46;
+    padding: 3px 12px;
+    border-radius: 2px;
+    margin-bottom: 5px;
+}
+
+.t8-rank-badge span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #d4b588;
+    letter-spacing: 1px;
+}
+
+/* T8 Red Stat Label Blocks */
+.t8-stat-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+}
+
+.t8-red-label {
+    background-color: #ff003c;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255, 0, 60, 0.4);
+}
+
+.t8-stat-text {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-left: 2px;
+}
+
+/* Kanang Column - Bio & Skill Badges */
+.t8-bio-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-sub-section {
+    background: #0b0b10;
+    border: 1px solid #1f1f2e;
+    padding: 20px;
+}
+
+.profile-sub-section h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-top: 0;
+    border-bottom: 1px solid #22222f;
+    padding-bottom: 8px;
+}
+
+.profile-sub-section .bio {
+    color: #a0a0b5;
+    line-height: 1.6;
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.skill-badge {
+    background: #171722;
+    color: #ffffff;
+    border: 1px solid #2f2f42;
+    padding: 5px 12px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   SECTION 6: PAGE 1 - FIGHTERS / LABS STAGE (Project Cards)
+   ========================================================================== */
+#projects.tekken-page {
+    background: linear-gradient(
+        135deg,
+        rgba(15, 15, 24, 0.95) 0%,
+        rgba(8, 8, 14, 0.95) 100%
+    );
+    border-left: 3px solid #00f0ff;
+    border-right: 3px solid #ff003c;
+}
+
+.fighter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.fighter-card {
+    background: #0b0b10;
+    border: 1px solid #22222f;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.fighter-card:hover {
+    border-color: #ff003c;
+    transform: translateY(-4px);
+    box-shadow: 0 0 15px rgba(255, 0, 60, 0.3);
+}
+
+.card-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff003c;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 3px 8px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card-preview {
+    height: 110px;
+    background: linear-gradient(135deg, #14141c 0%, #07070b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e0e0e6;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #ff003c;
+}
+
+.card-info { padding: 15px; }
+
+.card-info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.card-info p {
+    color: #7a7a8e;
+    font-size: 0.85rem;
+    margin: 10px 0 15px 0;
+    height: 40px;
+}
+
+.select-btn {
+    display: block;
+    text-align: center;
+    background: #14141c;
+    color: #ffffff;
+    border: 1px solid #2f2f42;
+    padding: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+}
+
+.fighter-card:hover .select-btn {
+    background: #ff003c;
+    border-color: #ff003c;
+}
+
+
+/* ==========================================================================
+   SECTION 7: PAGES 2 & 3 - STATS AND CONTACT
+   ========================================================================== */
+#skills.tekken-page {
+    background: linear-gradient(
+        135deg,
+        rgba(18, 22, 32, 0.95) 0%,
+        rgba(10, 10, 16, 0.95) 100%
+    );
+    border-left: 3px solid #ffaa00;
+    border-right: 3px solid #2a2a38;
+}
+
+#contact.tekken-page {
+    background: linear-gradient(
+        135deg,
+        rgba(25, 15, 20, 0.95) 0%,
+        rgba(10, 10, 14, 0.95) 100%
+    );
+    border-left: 3px solid #ff003c;
+    border-right: 3px solid #ff003c;
+}

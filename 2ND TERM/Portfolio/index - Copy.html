@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeric Ramo | TechPro Portfolio</title>
+    <!-- Google Fonts: Orbitron & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:ital,wght@1,900&display=swap" rel="stylesheet">
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TEKKEN 8 STYLE BOOT / SPLASH SCREEN -->
+    <div id="splash-screen">
+        <div class="splash-content">
+            <h1 class="splash-title">TECHPRO <span class="highlight">PORTFOLIO</span></h1>
+            <p class="splash-prompt">PRESS ENTER TO VIEW PROFILE</p>
+        </div>
+
+        <div class="splash-credits">
+            <p>TECHPRO™ PORTFOLIO & © Quirino High School ICT Dept.</p>
+            <p class="version">v2.0.26 (TERM TWO FINAL BUILD)</p>
+        </div>
+    </div>
+
+    <!-- MAIN PORTFOLIO CONTENT -->
+    <div id="main-portfolio" class="hidden">
+        
+        <!-- TEKKEN 8 TOP MENU BAR HEADER -->
+        <header class="tekken-header">
+            <div class="header-top-row">
+                <!-- Main Menu Button (Left Side) -->
+                <button id="main-menu-btn" class="main-menu-tab" title="Click to return to Title Screen"></button>
+
+                <!-- Player Tag (Right Side) -->
+                <div class="tekken-player-tag">
+                    <span>PLAYER: JERIC RAMO</span>
+                </div>
+            </div>
+
+            <!-- Horizontal Tab Navigation with PlayStation-style L1/R1 badges -->
+            <nav class="tekken-top-nav">
+                <!-- L1 PlayStation Badge with Q shortcut -->
+                <span class="ps-button">L1 <small>[Q]</small></span>
+
+                <!-- Navigation Tabs -->
+                <a href="#about" class="nav-tab active" data-index="0">Profile</a>
+                <a href="#projects" class="nav-tab" data-index="1">Fighters / Labs</a>
+                <a href="#skills" class="nav-tab" data-index="2">Stats</a>
+                <a href="#contact" class="nav-tab" data-index="3">Contact</a>
+
+                <!-- R1 PlayStation Badge with E shortcut -->
+                <span class="ps-button">R1 <small>[E]</small></span>
+            </nav>
+        </header>
+
+        <!-- SLIDING PAGES VIEWPORT CONTAINER -->
+        <main class="pages-viewport">
+            <div class="pages-track" id="pagesTrack">
+                
+<!-- PAGE 0: ABOUT / PROFILE (EXACT TEKKEN 8 CHARACTER STATS LAYOUT) -->
+<section id="about" class="tekken-page tekken-panel lili-profile-page">
+    
+    <div class="tekken-character-select-layout">
+        
+        <!-- KALIWANG BAHAGI: EXACT TEKKEN 8 CHARACTER STATS COLUMN -->
+        <div class="t8-character-info">
+            
+            <div class="t8-avatar-container">
+            <img src="images/jerek.png" alt="Jeric Ramo" class="t8-avatar-img">
+            </div>
+            
+            <!-- Slanted Character / Player Name -->
+            <h1 class="t8-char-name">JERIC</h1>
+            
+            <!-- Rank Badge -->
+            <div class="t8-rank-badge">
+                <span>Beginner</span>
+            </div>
+
+            <!-- Red Label Block 1: Fighting Style -->
+            <div class="t8-stat-block">
+                <span class="t8-red-label">Fighting Style</span>
+                <span class="t8-stat-text">Self-Taught Web Dev</span>
+            </div>
+
+            <!-- Red Label Block 2: Nationality -->
+            <div class="t8-stat-block">
+                <span class="t8-red-label">Nationality</span>
+                <span class="t8-stat-text">Filipino (QHS ICT)</span>
+            </div>
+
+            <!-- Red Label Block 3: Height -->
+            <div class="t8-stat-block">
+                <span class="t8-red-label">Height</span>
+                <span class="t8-stat-text">180 cm</span>
+            </div>
+
+            <!-- Red Label Block 4: Weight -->
+            <div class="t8-stat-block">
+                <span class="t8-red-label">Weight</span>
+                <span class="t8-stat-text">59 kg</span>
+            </div>
+
+        </div>
+
+        <!-- KANANG BAHAGI: BIO & SUB-SECTION DETAILS -->
+        <div class="t8-bio-details">
+            <h2 class="section-title">PLAYER 1 PROFILE</h2>
+            
+            <div class="profile-sub-section">
+                <h3>ABOUT ME</h3>
+                <p class="bio">Passionate web development student specializing in semantic HTML5, advanced CSS layouts, responsive grids, and interactive UI design inspired by high-octane gaming aesthetics.</p>
+            </div>
+
+            <div class="profile-sub-section">
+                <h3>CORE SKILLS</h3>
+                <div class="skill-tags">
+                    <span class="skill-badge">HTML5</span>
+                    <span class="skill-badge">CSS3 Flexbox</span>
+                    <span class="skill-badge">Grid Layouts</span>
+                    <span class="skill-badge">JS Events</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>                <!-- PAGE 1: PROJECTS / CHARACTER SELECT GRID -->
+                <section id="projects" class="tekken-page tekken-panel">
+                    <h2 class="section-title">SELECT FIGHTER / LAB STAGE</h2>
+                    <div class="fighter-grid">
+                        
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 01</div>
+                            <div class="card-preview">NAVBAR ARENA</div>
+                            <div class="card-info">
+                                <h3>NAVIGATION BARS</h3>
+                                <p>Sticky glassmorphism & responsive hamburger nav architecture.</p>
+                                <a href="#" class="select-btn">INSPECT CODE</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 02</div>
+                            <div class="card-preview">LAYOUT ZONE</div>
+                            <div class="card-info">
+                                <h3>CSS POSITIONING</h3>
+                                <p>Mastery of flexbox, absolute positioning, z-index overlays.</p>
+                                <a href="#" class="select-btn">INSPECT CODE</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 03</div>
+                            <div class="card-preview">SELECTOR STAGE</div>
+                            <div class="card-info">
+                                <h3>COMBINATORS LAB</h3>
+                                <p>Targeted styling using pseudo-classes & child selectors.</p>
+                                <a href="#" class="select-btn">INSPECT CODE</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 04</div>
+                            <div class="card-preview">SPRITE DOJO</div>
+                            <div class="card-info">
+                                <h3>GALLERY & SPRITES</h3>
+                                <p>Responsive photo grid layout with CSS background sprites.</p>
+                                <a href="#" class="select-btn">INSPECT CODE</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- PAGE 2: SKILLS / STATS -->
+                <section id="skills" class="tekken-page tekken-panel">
+                    <h2 class="section-title">COMBAT STATS (SKILLS)</h2>
+                    <p style="color: #a0a0b5;">HTML5, CSS3, Flexbox, Grid Layouts, Responsive Design.</p>
+                </section>
+
+                <!-- PAGE 3: CONTACT -->
+                <section id="contact" class="tekken-page tekken-panel">
+                    <h2 class="section-title">CHALLENGE / CONTACT</h2>
+                    <p style="color: #a0a0b5;">Get in touch for school projects and collaborations.</p>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- JAVASCRIPT: HORIZONTAL SLIDING TRANSITION LOGIC -->
+    <script>
+        const splash = document.getElementById('splash-screen');
+        const mainPortfolio = document.getElementById('main-portfolio');
+        const mainMenuBtn = document.getElementById('main-menu-btn');
+        const navTabs = document.querySelectorAll('.tekken-top-nav .nav-tab[data-index]');
+        const pagesTrack = document.getElementById('pagesTrack');
+        
+        let currentTabIndex = 0;
+
+        function switchTab(index) {
+            navTabs.forEach(tab => tab.classList.remove('active'));
+            navTabs[index].classList.add('active');
+            
+            // Pahigang pag-slide ng track
+            const translateXValue = index * 25;
+            pagesTrack.style.transform = `translateX(-${translateXValue}%)`;
+        }
+
+        function enterPortfolio() {
+            splash.classList.add('fade-out');
+            setTimeout(() => {
+                splash.style.display = 'none';
+                mainPortfolio.classList.remove('hidden');
+                mainPortfolio.classList.add('fade-in');
+            }, 800);
+        }
+
+        window.addEventListener('keydown', function(e) {
+            if (splash.style.display !== 'none') {
+                if (e.key === 'Enter') {
+                    enterPortfolio();
+                }
+                return;
+            }
+
+            if (e.key === 'q' || e.key === 'Q') {
+                e.preventDefault();
+                currentTabIndex--;
+                if (currentTabIndex < 0) {
+                    currentTabIndex = navTabs.length - 1;
+                }
+                switchTab(currentTabIndex);
+            } 
+            else if (e.key === 'e' || e.key === 'E') {
+                e.preventDefault();
+                currentTabIndex++;
+                if (currentTabIndex >= navTabs.length) {
+                    currentTabIndex = 0;
+                }
+                switchTab(currentTabIndex);
+            }
+        });
+
+        navTabs.forEach((tab, idx) => {
+            tab.addEventListener('click', function(e) {
+                e.preventDefault();
+                currentTabIndex = idx;
+                switchTab(currentTabIndex);
+            });
+        });
+
+        mainMenuBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            splash.style.display = 'flex';
+            splash.classList.remove('fade-out');
+            mainPortfolio.classList.add('hidden');
+            mainPortfolio.classList.remove('fade-in');
+            currentTabIndex = 0;
+            switchTab(0);
+        });
+    </script>
+
+</body>
+</html>
