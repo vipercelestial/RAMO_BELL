@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeric Ramo | TechPro Portfolio</title>
-    <!-- Google Fonts: Orbitron & Montserrat -->
+    <!-- google fonts: orbitron & montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Orbitron:ital,wght@1,900&display=swap" rel="stylesheet">
-    <!-- External CSS Link -->
+    <!-- external css link -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- ==========================================
-         SECTION 1: TEKKEN 8 BOOT / SPLASH SCREEN
-         ========================================== -->
+    <!-- boot / splash screen -->
     <div id="splash-screen">
         <div class="splash-content">
             <h1 class="splash-title">TECHPRO <span class="highlight">PORTFOLIO</span></h1>
-            <p class="splash-prompt">PRESS ENTER TO VIEW PROFILE</p>
+            <!-- prompt na mag-ghoghost out pagka-enter -->
+            <p class="splash-prompt" id="splashPrompt">PRESS ENTER TO VIEW PROFILE</p>
         </div>
 
         <div class="splash-credits">
@@ -27,26 +26,23 @@
             <p class="version">v0.0.1 (alpha)</p>
         </div>
     </div>
-    <!-- ==========================================
-         MAIN PORTFOLIO WRAPPER (Hidden initially)
-         ========================================== -->
+
+    <!-- main portfolio container (hidden by default) -->
     <div id="main-portfolio" class="hidden">
         
-        <!-- ==========================================
-             SECTION 2: TEKKEN 8 TOP HEADER & NAV
-             ========================================== -->
+        <!-- top header with navigation tabs -->
         <header class="tekken-header">
             <div class="header-top-row">
-                <!-- Main Menu / Title Screen Trigger Button -->
+                <!-- main menu / title screen trigger button -->
                 <button id="main-menu-btn" class="main-menu-tab" title="Click to return to Title Screen"></button>
 
-                <!-- Player Gamertag Badge -->
+                <!-- player gamertag badge -->
                 <div class="tekken-player-tag">
                     <span>PLAYER: JERIC RAMO</span>
                 </div>
             </div>
 
-            <!-- Horizontal Tab Navigation with PlayStation-style L1/R1 Badges -->
+            <!-- horizontal tab navigation -->
             <nav class="tekken-top-nav">
                 <span class="ps-button">Q</span>
 
@@ -59,39 +55,39 @@
             </nav>
         </header>
 
-        <!-- ==========================================
-             SECTION 3: HORIZONTAL CAROUSEL VIEWPORT
-             ========================================== -->
+        <!-- horizontal sliding pages viewport -->
         <main class="pages-viewport">
             <div class="pages-track" id="pagesTrack">
                 
-                <!-- ------------------------------------------
-                     PAGE 0: PLAYER 1 PROFILE (T8 Style)
-                     ------------------------------------------ -->
+                <!-- page 0: profile -->
                 <section id="about" class="tekken-page tekken-panel lili-profile-page">
                     <div class="tekken-character-select-layout">
                         
-                        <!-- KALIWANG COLUMN: Character Render & Stat Blocks (Bottom Anchored) -->
+                        <!-- left column: avatar & stat blocks -->
                         <div class="t8-character-info">
                             
-                            <!-- Profile Avatar Image (Fade-out Bottom Blend) -->
+                            <!-- avatar image -->
                             <div class="t8-avatar-container">
                                 <img src="images/jerek.png" alt="Jeric Ramo" class="t8-avatar-img">
                             </div>
                             
-                            <!-- Slanted Character Name -->
+                            <!-- character name -->
                             <h1 class="t8-char-name">JERIC</h1>
                             
-                            <!-- Rank Badge -->
+                            <!-- rank badge -->
                             <div class="t8-rank-badge">
                                 <img src="images/rankbadge.png" alt="Rank Badge">
                             </div>
 
                             <!-- stat blocks -->
-                             
                             <div class="t8-stat-block">
                                 <span class="t8-red-label">Fighting Style</span>
-                                <span class="t8-stat-text">School-Taught Web Dev</span>
+                                <span class="t8-stat-text">School / Self-Taught Web Dev</span>
+                            </div>
+
+                            <div class="t8-stat-block">
+                                <span class="t8-red-label">Teacher</span>
+                                <span class="t8-stat-text">Mr. Reynold Lorens Acal</span>
                             </div>
 
                             <div class="t8-stat-block">
@@ -99,45 +95,123 @@
                                 <span class="t8-stat-text">11 - Bell</span>
                             </div>
 
-                            
                             <div class="t8-stat-block">
-                                <span class="t8-red-label">Height</span>
-                                <span class="t8-stat-text">180 cm</span>
-                            </div>
-
-                            <div class="t8-stat-block">
-                                <span class="t8-red-label">Weight</span>
-                                <span class="t8-stat-text">59 kg</span>
+                                <span class="t8-red-label">Nationality</span>
+                                <span class="t8-stat-text">Filipino</span>
                             </div>
 
                         </div>
 
-                        <!-- KANANG COLUMN: Bio & Core Skills -->
-                        <div class="t8-bio-details">
-                            <h2 class="section-title">PLAYER 1 PROFILE</h2>
-                            
+                        <!-- right column: scrollable bio & details -->
+                        <div class="t8-bio-details profile-content-scroll">
+                            <h2 class="section-title">PROFILE</h2>
+                                                        
+                            <!-- bio section -->
                             <div class="profile-sub-section">
-                                <h3>ABOUT ME</h3>
-                                <p class="bio">Passionate web development student specializing in semantic HTML5, advanced CSS layouts, responsive grids, and interactive UI design inspired by high-octane gaming aesthetics.</p>
+                                <h3>Introduction</h3>
+                                <p class="bio">Wazzup and Welcome to my portfolio! I am Jerick, passionate web development student specializing in semantic HTML, advanced CSS layouts, interactive ui designs inspired by the most popular gaming aesthetics with this one being inspired from the popular Fighing Game <span class="t8-red-label" style="color: azure;">Tekken 8</span>.</p>
                             </div>
 
+                            <!-- power / status stat bars -->
                             <div class="profile-sub-section">
-                                <h3>CORE SKILLS</h3>
-                                <div class="skill-tags">
-                                    <span class="skill-badge">HTML5</span>
-                                    <span class="skill-badge">CSS3 Flexbox</span>
-                                    <span class="skill-badge">Grid Layouts</span>
-                                    <span class="skill-badge">JS Events</span>
+                                <h3>LEVELS OF EXPERTISE</h3>
+                                <div class="t8-stat-bars">
+                                    <div class="t8-bar-group">
+                                        <div class="t8-bar-label"><span>HTML (FRONTEND LAYOUTING)</span> <span>60%</span></div>
+                                        <div class="t8-bar-track"><div class="t8-bar-fill" style="width: 60%;"></div></div>
+                                    </div>
+                                    <div class="t8-bar-group">
+                                        <div class="t8-bar-label"><span>CSS (UNDERSTANDING AND DESIGN)</span> <span>85%</span></div>
+                                        <div class="t8-bar-track"><div class="t8-bar-fill" style="width: 85%;"></div></div>
+                                    </div>
+                                    <div class="t8-bar-group">
+                                        <div class="t8-bar-label"><span>JAVASCRIPT (LOGIC & EVENTS)</span> <span>20%</span></div>
+                                        <div class="t8-bar-track"><div class="t8-bar-fill" style="width: 20%;"></div></div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
+                            <!-- favorite technologies section -->
+                            <div class="profile-sub-section">
+                                <h3>FAVORITE TECHNOLOGIES</h3>
+                                <div class="tech-grid">
+                                    
+                                    <!-- card 1: wireless tech -->
+                                    <div class="tech-card wireless" 
+                                         data-title="Wireless Technologies" 
+                                         data-desc="Wanna know why? I find it very interesting how wireless technologies work, apparently it all started with the invention of the radio, which over time evolved into the modern wireless communication we have today. I find it fascinating that wireless communication had gotten so advanced that we can move around large amounts of data over the air without any physical connection. Dont get me started with latency aswell, it is just almost impossible to believe how we can send data over the air and have it arrive at its destination in a matter of milliseconds. It really is an amazing technology, as incredible people continue to improve wireless technologies, imagine what it will be like in the future.."
+                                         data-video=https://www.youtube.com/embed/kxLcwIMYmr0&t-R">
+                                        <img src="images/wifi_icon.png" alt="wifi icon" class="tech-icon">
+                                        <div class="tech-info">
+                                            <span class="tech-name">Wireless Technologies</span>
+                                            <span class="tech-desc">Signals, Wi-Fi & Protocols</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- card 2: chip fabrication / lithography -->
+                                    <div class="tech-card chip" 
+                                         data-title="Silicon Chip Fabrication & Lithography" 
+                                         data-desc="To give ya some insight into this fascinating topic.. Photolithography is the process of creating patterns on a silicon wafer using light only done by semiconductor manufacturers with a really sophisticated machine that does all of this complicated process. I am EXTREMELY fascinated by how modern microprocessors are built, Photolithography uses giant EUV (Extreme Ultraviolet) machines to etch billions of microscopic transistors onto a single silicon wafer using light waves. It is just mind-boggling how precision engineering at the nanometer scale makes all of our modern computing power possible. Without photolithography, we literally wouldn't have the powerful computers, smartphones, and other electronic devices that we rely on today. It is truly a remarkable technology that massively revolutionized the way we liveour lives, just imagine how much of a difference it made in the world, and how much more it will continue to shape our future."
+                                         data-video="https://www.youtube.com/embed/dX9CGRZwD-w">
+                                        <img src="images/chip_icon.png" alt="chip icon" class="tech-icon">
+                                        <div class="tech-info">
+                                            <span class="tech-name">PhotoLithography</span>
+                                            <span class="tech-desc">Nanometer-Scale of manufacturing technology</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- card 3: javascript -->
+                                    <div class="tech-card js" 
+                                         data-title="Vanilla JavaScript Logic" 
+                                         data-desc="Building interactive web applications, handling dynamic DOM manipulation, custom event listeners, and smooth state-based transition animations."
+                                         data-video="https://www.youtube.com/embed/W6NZfCO5SIk">
+                                        <span class="tech-icon">JS</span>
+                                        <div class="tech-info">
+                                            <span class="tech-name">Vanilla JavaScript</span>
+                                            <span class="tech-desc">DOM Events & UI Logic</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- hobbies & interest tags -->
+                            <div class="profile-sub-section">
+                                <h3>HOBBIES & PASSIONS</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-badge hobby-badge">Web Development</span>
+                                    <span class="skill-badge hobby-badge">Web Designing</span>
+                                    <span class="skill-badge hobby-badge">Competitive Gaming</span>
+                                    <span class="skill-badge hobby-badge">Minecraft Server Management</span>
+                                    <span class="skill-badge hobby-badge">Hardware Optimizations</span>
+                                    <span class="skill-badge hobby-badge">UI/UX design Layouts</span>
+                                </div>
+                            </div>
+
+                            <!-- special moves / tools list -->
+                            <div class="profile-sub-section">
+                                <h3>SPECIAL MOVES (TOOLS)</h3>
+                                <div class="t8-special-moves">
+                                    <div class="move-item">
+                                        <span class="move-command">f, f + 1</span>
+                                        <span class="move-name">VS Code Rapid Formatting</span>
+                                    </div>
+                                    <div class="move-item">
+                                        <span class="move-command">d/f + 2</span>
+                                        <span class="move-name">Flexbox Axis Alignment</span>
+                                    </div>
+                                    <div class="move-item">
+                                        <span class="move-command">b + 3, 4</span>
+                                        <span class="move-name">Keydown Event Handlers</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </section>
 
-                <!-- ------------------------------------------
-                     PAGE 1: FIGHTERS / LABS (Project Grid)
-                     ------------------------------------------ -->
+                <!-- page 1: fighters / labs -->
                 <section id="projects" class="tekken-page tekken-panel">
                     <h2 class="section-title">SELECT FIGHTER / LAB STAGE</h2>
                     <div class="fighter-grid">
@@ -185,17 +259,13 @@
                     </div>
                 </section>
 
-                <!-- ------------------------------------------
-                     PAGE 2: COMBAT STATS (Skills)
-                     ------------------------------------------ -->
+                <!-- page 2: stats -->
                 <section id="skills" class="tekken-page tekken-panel">
                     <h2 class="section-title">COMBAT STATS (SKILLS)</h2>
                     <p style="color: #a0a0b5;">HTML5, CSS3, Flexbox, Grid Layouts, Responsive Design.</p>
                 </section>
 
-                <!-- ------------------------------------------
-                     PAGE 3: CHALLENGE (Contact)
-                     ------------------------------------------ -->
+                <!-- page 3: contact -->
                 <section id="contact" class="tekken-page tekken-panel">
                     <h2 class="section-title">CHALLENGE / CONTACT</h2>
                     <p style="color: #a0a0b5;">Get in touch for school projects and collaborations.</p>
@@ -203,13 +273,52 @@
 
             </div>
         </main>
+
+        <!-- tekken style wide two-column tech detail popup modal -->
+        <div id="techModal" class="tekken-modal hidden">
+            <div class="modal-content wide-modal">
+                <div class="modal-header">
+                    <h3 id="modalTitle">TECH DETAILS</h3>
+                    <button class="modal-close" id="modalClose">&times;</button>
+                </div>
+                
+                <div class="modal-body tekken-modal-grid">
+                    <!-- kaliwa: text desc -->
+                    <div class="modal-text-side">
+                        <p id="modalDesc">Detailed explanation goes here...</p>
+                    </div>
+                    
+                    <!-- kanan: youtube video embed -->
+                    <div class="modal-video-side">
+                        <div class="video-container">
+                            <iframe id="modalVideoIframe" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <span class="modal-hint">[ ESC / CLICK OUTSIDE ] TO CLOSE</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <!-- ==========================================
-         SECTION 4: JAVASCRIPT KEYBOARD & CAROUSEL LOGIC
-         ========================================== -->
+    <!-- tekken 8 style footer bar -->
+    <footer class="tekken-footer">
+        <div class="footer-content">
+            <span class="footer-status">
+                <span class="status-dot"></span> SYSTEM: ONLINE
+            </span>
+            <p class="footer-copy">© 2026 JERIC RAMO • TECHPRO ICT • QUIRINO HIGH SCHOOL</p>
+            <span class="footer-build">BUILD v0.0.1 (ALPHA)</span>
+        </div>
+    </footer>
+
+    <!-- javascript logic -->
     <script>
         const splash = document.getElementById('splash-screen');
+        const splashPrompt = document.getElementById('splashPrompt');
         const mainPortfolio = document.getElementById('main-portfolio');
         const mainMenuBtn = document.getElementById('main-menu-btn');
         const navTabs = document.querySelectorAll('.tekken-top-nav .nav-tab[data-index]');
@@ -221,23 +330,46 @@
             navTabs.forEach(tab => tab.classList.remove('active'));
             navTabs[index].classList.add('active');
             
-            // Slide horizontal track by 25% per index (4 pages total)
             const translateXValue = index * 25;
             pagesTrack.style.transform = `translateX(-${translateXValue}%)`;
         }
 
         function enterPortfolio() {
-            splash.classList.add('fade-out');
+            splashPrompt.classList.add('ghost-out');
+
             setTimeout(() => {
-                splash.style.display = 'none';
-                mainPortfolio.classList.remove('hidden');
-                mainPortfolio.classList.add('fade-in');
-            }, 800);
+                splash.classList.add('fade-out');
+                splash.classList.remove('slide-back-in');
+                
+                setTimeout(() => {
+                    splash.style.display = 'none';
+                    splashPrompt.classList.remove('ghost-out');
+                    mainPortfolio.classList.remove('hidden', 'fade-out-blur');
+                    mainPortfolio.classList.add('fade-in');
+                }, 800);
+            }, 700);
         }
 
-        // Global Keydown Listeners: Enter to Boot, Q/E for L1/R1 Navigation
+        function returnToSplash() {
+            mainPortfolio.classList.remove('fade-in');
+            mainPortfolio.classList.add('fade-out-blur');
+
+            setTimeout(() => {
+                splash.style.display = 'flex';
+                splash.classList.remove('fade-out');
+                splash.classList.add('slide-back-in');
+
+                setTimeout(() => {
+                    mainPortfolio.classList.add('hidden');
+                    mainPortfolio.classList.remove('fade-out-blur');
+                    currentTabIndex = 0;
+                    switchTab(0);
+                }, 600);
+            }, 300);
+        }
+
         window.addEventListener('keydown', function(e) {
-            if (splash.style.display !== 'none') {
+            if (splash.style.display !== 'none' && !splash.classList.contains('fade-out') && !splashPrompt.classList.contains('ghost-out')) {
                 if (e.key === 'Enter') {
                     enterPortfolio();
                 }
@@ -262,7 +394,6 @@
             }
         });
 
-        // Click listeners for top menu tabs
         navTabs.forEach((tab, idx) => {
             tab.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -271,15 +402,55 @@
             });
         });
 
-        // Click listener for Main Menu button (Return to Boot Screen)
         mainMenuBtn.addEventListener('click', function(e) {
             e.preventDefault();
-            splash.style.display = 'flex';
-            splash.classList.remove('fade-out');
-            mainPortfolio.classList.add('hidden');
-            mainPortfolio.classList.remove('fade-in');
-            currentTabIndex = 0;
-            switchTab(0);
+            returnToSplash();
+        });
+
+        // --- TECH MODAL POPUP LOGIC WITH VIDEO STOP ---
+        const techCards = document.querySelectorAll('.tech-card');
+        const techModal = document.getElementById('techModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalVideoIframe = document.getElementById('modalVideoIframe');
+        const modalClose = document.getElementById('modalClose');
+
+        techCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const title = card.getAttribute('data-title');
+                const desc = card.getAttribute('data-desc');
+                const videoUrl = card.getAttribute('data-video');
+
+                modalTitle.textContent = title;
+                modalDesc.textContent = desc;
+                
+                if (videoUrl) {
+                    modalVideoIframe.src = videoUrl;
+                } else {
+                    modalVideoIframe.src = '';
+                }
+
+                techModal.classList.remove('hidden');
+            });
+        });
+
+        function closeModal() {
+            techModal.classList.add('hidden');
+            modalVideoIframe.src = ''; // humihinto ang video sa pag-close
+        }
+
+        modalClose.addEventListener('click', closeModal);
+
+        window.addEventListener('click', (e) => {
+            if (e.target === techModal) {
+                closeModal();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !techModal.classList.contains('hidden')) {
+                closeModal();
+            }
         });
     </script>
 
