@@ -1,0 +1,91 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0; 
+    padding: 20px; 
+    font-family: Arial, sans-serif;
+    color: #222; 
+    background: #f7f7f7;
+}
+
+header { 
+    padding: 18px; 
+    text-align: center; 
+    color: white; 
+    background: #6b1024; 
+    border-radius: 6px;
+}
+
+.gallery { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 12px; 
+    margin-top: 15px;
+}
+
+.gallery-card { 
+    width: calc(25% - 9px); 
+    border: 1px solid #ccc; 
+    background: white; 
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: border-color 0.2s ease;
+}
+
+.gallery-card:hover { 
+    border-color: #6b1024; 
+}
+
+.gallery-card img { 
+    display: block; 
+    width: 100%; 
+    height: auto; 
+}
+
+.caption { 
+    padding: 12px; 
+    margin: 0; 
+    text-align: center; 
+    font-weight: bold;
+    color: #444;
+}
+
+/* Navigation Sprite Styles */
+.sprite-nav {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.sprite-icon {
+    display: inline-block; 
+    height: 44px;
+    background-image: url("img_navsprites.gif"); 
+    background-repeat: no-repeat;
+    border-radius: 4px;
+}
+
+.home { 
+    width: 46px; 
+    background-position: 0 0; 
+}
+
+.previous { 
+    width: 43px; 
+    background-position: -47px 0; 
+}
+
+.next { 
+    width: 43px; 
+    background-position: -91px 0; 
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+    .gallery-card { width: calc(50% - 6px); }
+}
+
+@media (max-width: 480px) {
+    .gallery-card { width: 100%; }
+}

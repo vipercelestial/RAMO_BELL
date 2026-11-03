@@ -194,7 +194,7 @@ body {
 
 .nav-tab.active {
     color: #ffffff;
-    background: #171722;
+    background-image: linear-gradient(to top, rgba(255, 0, 60, 0.3), transparent);
     border-bottom: 3px solid #ff003c;
 }
 
@@ -204,8 +204,8 @@ body {
     font-family: 'Orbitron', sans-serif;
     font-size: 0.75rem;
     font-weight: 900;
-    padding: 4px 10px;
-    border-radius: 2px;
+    padding: 0px 7px;
+    border-radius: 0px 0px 5px 5px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
     letter-spacing: 1px;
     display: inline-flex;
@@ -214,11 +214,6 @@ body {
     text-transform: uppercase;
 }
 
-.ps-button small {
-    font-size: 0.6rem;
-    color: #4a4a5c;
-    font-weight: 700;
-}
 
 
 /* ==========================================================================
@@ -328,27 +323,23 @@ body {
     font-style: italic;
     color: #ffffff;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 5px;
     text-transform: uppercase;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    place-self: center;
 }
 
 /* T8 Rank Badge */
 .t8-rank-badge {
-    background: linear-gradient(135deg, #3a2c20 0%, #1a120c 100%);
-    border: 1px solid #8c6d46;
-    padding: 3px 12px;
+    padding: 3px 7px;
     border-radius: 2px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    place-self: center;
 }
-
-.t8-rank-badge span {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: #d4b588;
-    letter-spacing: 1px;
-}
+.t8-rank-badge img {
+    width: 110px;
+    height: auto;
+} 
 
 /* T8 Red Stat Label Blocks */
 .t8-stat-block {
@@ -359,8 +350,8 @@ body {
 }
 
 .t8-red-label {
-    background-color: #ff003c;
-    color: #ffffff;
+    background-image: linear-gradient(to right, rgb(132, 14, 53), rgb(234, 48, 111));
+    color: rgb(0, 0, 0);
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65rem;
     font-weight: 800;
@@ -373,11 +364,12 @@ body {
 
 .t8-stat-text {
     color: #ffffff;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 0.9rem;
-    font-weight: 600;
+    /* font-weight: 600; */
     letter-spacing: 0.5px;
     padding-left: 2px;
+    text-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 /* Kanang Column - Bio & Skill Badges */

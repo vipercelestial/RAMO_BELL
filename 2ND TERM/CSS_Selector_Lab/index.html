@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechPro Selector Lab</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 0; line-height: 1.6; color: #222; }
+    header { background: #6b1024; color: white; padding: 20px; text-align: center; }
+    main { padding: 20px; }
+    .notice { padding: 12px; background: #f8e9ed; border-left: 4px solid #6b1024; }
+    .card { border: 1px solid #bbb; padding: 12px; margin: 12px 0; }
+    .menu a { display: inline-block; padding: 8px 12px; color: #6b1024; text-decoration: none; }
+    .task-list li { margin: 6px 0; }
+    input { padding: 8px; margin: 5px 0; }
+
+    /* PART A: CSS Combinators */
+    .card p { color: #6b1024; }[cite: 21]
+    .card > p { font-weight: bold; }[cite: 21]
+    #combinators h2 + .card { background: #f8e9ed; }[cite: 21]
+    .card ~ p { border: 1px dashed #6b1024; padding: 8px; }[cite: 21]
+
+    /* PART B: Interactive Pseudo-classes */
+    .menu a:link { color: #6b1024; }[cite: 21]
+    .menu a:visited { color: #551a8b; }[cite: 21]
+    .menu a:hover { background: #6b1024; color: white; }[cite: 21]
+    .menu a:active { transform: scale(0.98); }[cite: 21]
+    
+    button:hover { background: #6b1024; color: white; cursor: pointer; }[cite: 21]
+    button:active { transform: scale(0.98); }[cite: 21]
+    input:focus { outline: 3px solid #d6a0ad; background: #fff8fa; }[cite: 21]
+
+    /* PART C: Structural Pseudo-classes */
+    .task-list li:first-child { color: #6b1024; font-weight: bold; }[cite: 21]
+    .task-list li:last-child { text-decoration: underline; }[cite: 21]
+    .task-list li:nth-child(even) { background: #f8e9ed; padding: 4px; }[cite: 21]
+    .task-list li:nth-child(3) { border-left: 4px solid #6b1024; padding-left: 8px; }[cite: 21]
+
+    /* PART D: Pseudo-elements for Text */
+    .intro::first-letter { color: #6b1024; font-size: 220%; font-weight: bold; float: left; line-height: 1; padding-right: 4px; }[cite: 21]
+    .tip::first-line { font-variant: small-caps; color: #6b1024; }[cite: 21]
+
+    /* PART E: Pseudo-elements for Content */
+    #content h2::before { content: "★ "; color: #b8860b; }[cite: 21]
+    #content h2::after { content: " ✓"; color: #6b1024; }[cite: 21]
+    .task-list li::marker { color: #6b1024; font-size: 1.2em; }[cite: 21]
+    ::selection { color: white; background: #6b1024; }[cite: 21]
+</style>
+</head>
+<body>
+<header>
+    <h1>TechPro Selector Lab</h1>
+    <p>Practice combinators, pseudo-classes, and pseudo-elements.</p>
+</header>
+<main>
+    <nav class="menu">
+        <a href="#combinators">Combinators</a>
+        <a href="#states">Interactive States</a>
+        <a href="#structure">Structure</a>
+        <a href="#content">Pseudo-elements</a>
+    </nav>
+    <section id="combinators">
+        <h2>Combinator Practice</h2>
+        <div class="card">
+            <p>Paragraph directly inside the card.</p>
+            <div>
+                <p>Paragraph nested in another div.</p>
+            </div>
+        </div>
+        <p>Paragraph after the card.</p>
+    </section>
+    <section id="states">
+        <h2>Interactive States</h2>
+        <p><a href="#structure">Try this link</a></p>
+        <button type="button">Move pointer or click</button>
+        <p><label for="student-name">Student name: </label></p>
+        <input id="student-name" type="text" placeholder="Click here and type">
+    </section>
+    <section id="structure">
+        <h2>Structural Selectors</h2>
+        <ul class="task-list">
+            <li>Open Visual Studio Code</li>
+            <li>Create index.html</li>
+            <li>Write the HTML structure</li>
+            <li>Add CSS rules</li>
+            <li>Save and refresh</li>
+        </ul>
+    </section>
+    <section id="content">
+        <h2>Generated and Text Content</h2>
+        <p class="intro">Technology skills grow through practice. Test each selector and observe the changes.</p>
+        <p class="tip">Remember: use pseudo-classes for states and pseudo-elements to style part of an element or generate content.</p>
+    </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TechPro Image Lab & Photo Showcase</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>TechPro Image Lab</h1>
+    <p>Gallery and sprite practice showcasing campus spaces and local scenery</p>
+</header>
+
+<main>
+    <h2>Places to Explore</h2>
+    <section class="gallery">
+        <article class="gallery-card">
+            <a href="images/place1.jpg" target="_blank"><img src="images/place1.jpg" alt="A scenic coastal landscape"></a>
+            <p class="caption">Coastal View</p>
+        </article>
+        <article class="gallery-card">
+            <a href="images/place2.jpg" target="_blank"><img src="images/place2.jpg" alt="A green forest"></a>
+            <p class="caption">Green Forest</p>
+        </article>
+        <article class="gallery-card">
+            <a href="images/place3.jpg" target="_blank"><img src="images/place3.jpg" alt="A mountain landscape"></a>
+            <p class="caption">Mountain Trail</p>
+        </article>
+        <article class="gallery-card">
+            <a href="images/place4.jpg" target="_blank"><img src="images/place4.jpg" alt="A colorful night sky"></a>
+            <p class="caption">Night Sky</p>
+        </article>
+    </section>
+
+    <h2>Navigation Sprite</h2>
+    <nav class="sprite-nav" aria-label="Demo sprite navigation">
+        <a href="#" class="sprite-icon home" aria-label="Home"></a>
+        <a href="#" class="sprite-icon previous" aria-label="Previous"></a>
+        <a href="#" class="sprite-icon next" aria-label="Next"></a>
+    </nav>
+
+    <section class="note-section" style="margin-top: 30px; padding: 15px; background: #fff; border: 1px solid #ccc;">
+        <h3>Activity Note</h3>
+        <p>This gallery utilizes CSS Flexbox and media queries to automatically adapt its grid layout across wide, medium, and narrow screen widths. Meanwhile, image sprites combine multiple navigation icons into a single image file, displaying specific icons efficiently using <code>background-position</code> offsets.</p>
+    </section>
+</main>
+
+</body>
+</html>
