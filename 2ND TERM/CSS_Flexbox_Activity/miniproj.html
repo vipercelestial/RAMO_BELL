@@ -24,13 +24,15 @@
             display: flex; 
             justify-content: space-between; 
             align-items: center; gap: 12px; 
-            background: #f3e5e9; 
+            background: #4c4c4d; 
             padding: 12px 20px;
+            color: white;
         } 
         nav a {
-            color: #7b1530; 
+            color: white; 
             text-decoration: none; 
             font-weight: bold;
+
         } 
         main { 
             max-width: 1000px; 
@@ -44,24 +46,30 @@
             flex-wrap: wrap; 
             justify-content: space-evenly; 
             align-items: stretch; 
-            gap: 15px; 
-            background: #eee; 
+            gap: 12px; 
+            background: #7b1530; 
             padding: 15px; 
             min-height: 180px; 
+
         } 
         .card { flex: 1 1 220px; 
             background: white; 
             border: 2px solid #7b1530; 
             padding: 18px; 
             text-align: center; 
+            background-color: #797878;
+
         } 
 
         .featured {
             order: 2; 
             flex-grow: 2;
+            background-color: #797878;
         } 
         .special {
             align-self: center;
+            background-color:gold;
+
         } 
         footer {
             position:fixed;
@@ -81,24 +89,41 @@
         } 
         .card {
             flex: 1 1 auto;
+            color: #7b1530;
         } 
+        nav a {
+            text-align: center;
+        }
         } 
     </style> 
 </head> 
-<body> 
-<header><h1>TechPro Learning Hub</h1><p>Learning CSS Flexbox</p></header> 
-<nav><a href="#">Home</a><a href="#">Lessons</a><a href="#">Activities</a><a 
-href="#">Contact</a></nav> 
-<main> 
-<h2>Our Learning Cards</h2> 
-<p>Resize the browser window to test the responsive layout.</p> 
-<section class="flex-container"> 
-<article class="card">HTML Basics</article> 
-<article class="card featured">CSS Styling</article> 
-<article class="card special">JavaScript</article> 
-</section> 
+<body>
 
-</main>
-<footer>Grade 11 TechPro | CSS Flexbox Activity</footer> 
+    <header>
+        <h1>TechPro Learning Hub</h1>
+        <p>Learning CSS Flexbox</p>
+    </header> 
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Lessons</a>
+        <a href="#">Activities</a>
+        <a href="#">Contact</a>
+    </nav> 
+
+    <main> 
+        <h2>Our Learning Cards</h2> 
+        <p>Resize the browser window to test the responsive layout.</p> 
+
+        <section class="flex-container"> 
+            <article class="card">HTML Basics</article>
+            <article class="card featured">CSS Styling</article> 
+            <article class="card special">JavaScript</article> 
+        </section> 
+
+    </main>
+
+    <footer>Grade 11 TechPro | CSS Flexbox Activity</footer> 
+
 </body> 
 </html> 
