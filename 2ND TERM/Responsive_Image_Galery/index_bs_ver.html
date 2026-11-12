@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPro Image Gallery</title>
+    <style>
+      #bg-image {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          object-fit: cover;
+          filter: blur(10px) brightness(.5);
+          transform: scale(1.05) rotate(-1deg);
+          animation: background-fade-in 4.5s ease forwards;
+          z-index: -1;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      body { 
+          font-family: Arial, sans-serif; 
+          margin: 0px; 
+          background: #11052C; 
+          color: #ffffff; 
+      } 
+      header {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        width: 100%;
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+      }
+
+      .gallery {
+        place-self: center;
+        column-count: 6;   
+        column-gap: 0px;     
+        max-width: 1500px;
+        margin: 20px;
+        column-gap: 10px;
+        padding: 20px;
+      }
+
+  
+      .gallery-item {
+        position: relative;
+        width: 100%;
+        border: 2px solid transparent;
+        margin-bottom: 10px;
+        overflow: hidden;
+        border-radius: 5px;
+        isolation: isolate;
+        break-inside: avoid;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .gallery-image {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      .gallery-item::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          0deg,
+          transparent,
+          transparent 30%,
+          rgba(144, 12, 189, 0.3)
+        );
+        transform: rotate(-45deg);
+        transition: all 0.5s ease;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .gallery-item:hover {
+        z-index: 1;
+        transform: scale(1.02);
+        box-shadow: 0 0 20px rgba(165, 58, 223, 0.5);
+        border: 2px solid rgba(165, 58, 223, 0.5);
+      }
+
+      .gallery-item:hover::before {
+        opacity: 1;
+        transform: rotate(-45deg) translateY(100%);
+      }
+
+      footer {
+        color: white;
+        text-align: center;
+        padding: 14px;
+        background: transparent;
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+        backdrop-filter: blur(10px);
+
+      }
+
+      @media (max-width: 1500px) {
+        .gallery {
+          column-count: 5;
+        }
+      }
+
+   
+      @media (max-width: 1200px) {
+        .gallery {
+          column-count: 4;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .gallery {
+          column-count: 3;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .gallery {
+          column-count: 2;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <img id="bg-image" src="images/bg4.jpg" alt="Background Image">
+    <header>
+      <h1>TechPro Image Gallery</h1>
+      <p>Responsive Image Gallery using Flexbox</p>
+    </header>
+
+    <main>
+      <section class="gallery">
+        <div class="gallery-item">
+          <img src="images/1.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/2.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/3.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/4.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/5.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/6.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/7.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/8.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/9.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/10.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/11.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/12.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/13.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/14.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/15.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/16.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/17.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/18.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/19.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/20.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/21.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/22.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/23.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/24.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/25.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/26.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/27.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/28.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/29.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/30.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/31.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/32.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/33.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/34.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/35.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/36.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/37.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/38.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/39.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/40.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/41.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/42.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/43.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/44.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/45.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/46.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/47.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/48.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/49.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/50.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/51.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/52.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/53.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/54.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/55.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/56.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/57.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/58.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/59.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/60.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/61.jpg" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/62.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/63.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/64.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/65.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/66.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/67.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/68.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/69.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/70.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/71.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/72.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/73.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/74.png" alt="picture" class="gallery-image">
+        </div>
+        <div class="gallery-item">
+          <img src="images/75.png" alt="picture" class="gallery-image">
+        </div>
+
+      </section>
+    </main>
+    <footer>Grade 11 TechPro | Responsive Image Gallery</footer>
+  </body>
+</html>
