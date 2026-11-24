@@ -7,7 +7,6 @@ body {
     overflow-x: hidden;
     padding-bottom: 60px;
 }
-
 @font-face {
     font-family: 'TekkenCustom';
     src: url('fonts/tarrgetexpandital.ttf') format('truetype');
@@ -242,7 +241,7 @@ body {
 
 /* footer styles */
 .tekken-footer {
-    position: fixed;
+    position: sticky;
     bottom: 0;
     left: 0;
     width: 100%;
