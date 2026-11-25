@@ -7,6 +7,9 @@ body {
     overflow-x: hidden;
     padding-bottom: 60px;
 }
+
+
+/* font */
 @font-face {
     font-family: 'TekkenCustom';
     src: url('fonts/tarrgetexpandital.ttf') format('truetype');
@@ -346,7 +349,7 @@ body {
         rgba(45, 8, 22, 0.92) 100%
     );
     border-left: 3px solid #ff003c;
-    border-right: 3px solid #cfac62;
+    border-right: 3px solid #ff003c;
     box-shadow: 
         0 0 30px rgba(186, 85, 211, 0.2),
         0 0 15px rgba(255, 0, 60, 0.3);
@@ -440,27 +443,6 @@ body {
     letter-spacing: 0.5px;
     padding-left: 2px;
     text-shadow: 0 0 5px rgb(255, 255, 255);
-}
-
-/* scrollable right profile menu */
-.profile-content-scroll {
-    max-height: 80%;
-    overflow-y: auto;
-    padding-right: 12px;
-    scroll-behavior: smooth;
-}
-
-.profile-content-scroll::-webkit-scrollbar {
-    width: 3px;
-}
-
-.profile-content-scroll::-webkit-scrollbar-track {
-    background: #0b0b10;
-}
-
-.profile-content-scroll::-webkit-scrollbar-thumb {
-    background: #ff003c;
-    border-radius: 3px;
 }
 
 /* --- powerstats bars --- */
@@ -698,39 +680,92 @@ body {
     color: #ffffff;
 }
 
-/* --- T8 SPECIAL MOVES LIST --- */
-.t8-special-moves {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 5px;
+/* --- TOOLS & PROGRAMS GRID --- */
+.tool-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.move-item {
+.tool-card {
     display: flex;
     align-items: center;
     gap: 12px;
     background: #12121a;
-    border-left: 3px solid #ea306f;
-    padding: 6px 12px;
+    border: 1px solid #1f1f2e;
+    border-left: 3px solid #ff003c;
+    padding: 8px 12px;
+    transition: all 0.2s ease;
+    min-width: 0;
 }
 
-.move-command {
+.tool-card-featured {
+    grid-column: 1 / -1;
+}
+
+.tool-card:hover {
+    background: #171724;
+    border-color: #ff003c;
+    transform: translateX(3px);
+}
+
+.tool-icon {
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    object-fit: contain;
+}
+
+.tool-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.tool-name {
     font-family: 'Orbitron', sans-serif;
-    font-size: 0.75rem;
-    font-weight: 900;
-    color: #ea306f;
-    background: #1f0b14;
-    padding: 2px 6px;
-    border-radius: 2px;
-    letter-spacing: 1px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 
-.move-name {
+.tool-desc {
     font-family: 'Montserrat', sans-serif;
-    font-size: 0.8rem;
-    color: #e0e0e6;
-    font-weight: 600;
+    font-size: 0.68rem;
+    color: #8a8a9e;
+}
+
+.tool-placeholder {
+    border-style: dashed;
+    border-left-style: solid;
+    border-color: #39394b;
+    background: transparent;
+}
+
+.tool-placeholder:hover {
+    border-color: #ea306f;
+}
+
+.tool-add-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.35rem;
+    color: #77778a;
+    background: #171722;
+    border: 1px solid #39394b;
+}
+
+@media (max-width: 560px) {
+    .tool-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .t8-bio-details {
@@ -740,9 +775,10 @@ body {
 }
 
 .profile-sub-section {
-    background: #0b0b10;
+    background: transparent;
     border: 1px solid #1f1f2e;
     padding: 20px;
+    backdrop-filter: blur(10px);
 }
 
 .profile-sub-section h3 {

@@ -68,7 +68,7 @@
                             
                             <!-- avatar image -->
                             <div class="t8-avatar-container">
-                                <img src="images/jerek.png" alt="Jeric Ramo" class="t8-avatar-img">
+                                <img src="images/profile/jerek.png" alt="Jeric Ramo" class="t8-avatar-img">
                             </div>
                             
                             <!-- character name -->
@@ -76,7 +76,7 @@
                             
                             <!-- rank badge -->
                             <div class="t8-rank-badge">
-                                <img src="images/rankbadge.png" alt="Rank Badge">
+                                <img src="images/profile/rankbadge.png" alt="Rank Badge">
                             </div>
 
                             <!-- stat blocks -->
@@ -103,13 +103,123 @@
                         </div>
 
                         <!-- right column: scrollable bio & details -->
-                        <div class="t8-bio-details profile-content-scroll">
+                        <div class="t8-bio-details">
                             <h2 class="section-title">PROFILE</h2>
                                                         
                             <!-- bio section -->
                             <div class="profile-sub-section">
                                 <h3>Introduction</h3>
-                                <p class="bio">Wazzup and Welcome to my portfolio! I am Jerick, passionate web development student specializing in semantic HTML, advanced CSS layouts, interactive ui designs inspired by the most popular gaming aesthetics with this one being inspired from the popular Fighing Game <span class="t8-red-label" style="color: azure;">Tekken 8</span>.</p>
+                                <p class="bio">Welcome to my portfolio! I am Jerick, a passionate web development student specializing in semantic HTML, advanced CSS layouts, interactive ui designs inspired by the most popular gaming aesthetics with this one being inspired from the popular Fighing Game <span class="t8-red-label" style="color: azure;">Tekken 8</span>.</p>
+                            </div>
+
+                            <!-- hobbies & interest tags -->
+                            <div class="profile-sub-section">
+                                <h3>HOBBIES & PASSIONS</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-badge hobby-badge">Web Development</span>
+                                    <span class="skill-badge hobby-badge">Web Designing</span>
+                                    <span class="skill-badge hobby-badge">Gaming</span>
+                                    <span class="skill-badge hobby-badge">Cycling</span>
+                                    <span class="skill-badge hobby-badge">Minecraft Server Management</span>
+                                    <span class="skill-badge hobby-badge">Hardware Optimizations</span>
+                                    <span class="skill-badge hobby-badge">UI/UX design Layouts</span>
+                                </div>
+                            </div>
+
+
+                            <!-- favorite technologies section -->
+                            <div class="profile-sub-section">
+                                <h3>FAVORITE TECHNOLOGIES</h3>
+                                <div class="tech-grid">
+                                    
+                                    <!-- card 1: wireless tech -->
+                                    <div class="tech-card wireless" 
+                                         data-title="Wireless Technologies" 
+                                         data-desc="Wanna know why? I find it very interesting how wireless technologies work, apparently it all started with the invention of the radio, which over time evolved into the modern wireless communication we have today. I find it fascinating that wireless communication had gotten so advanced that we can move around large amounts of data over the air without any physical connection. Dont get me started with latency aswell, it is just almost impossible to believe how we can send data over the air and have it arrive at its destination in a matter of milliseconds. It really is an amazing technology, as incredible people continue to improve wireless technologies, imagine what it will be like in the future.."
+                                         data-video=https://www.youtube.com/embed/kxLcwIMYmr0&t-R">
+                                        <img src="images/profile/favtech/wifi_icon.png" alt="wifi icon" class="tech-icon">
+                                        <div class="tech-info">
+                                            <span class="tech-name">Wireless Technologies</span>
+                                            <span class="tech-desc">Signals, Wi-Fi & Protocols</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- card 2: chip fabrication / lithography -->
+                                    <div class="tech-card chip" 
+                                         data-title="Silicon Chip Fabrication & Lithography" 
+                                         data-desc="To give ya some insight into this fascinating topic.. Photolithography is the process of creating patterns on a silicon wafer using light only done by semiconductor manufacturers with a really sophisticated machine that does all of this complicated process. I am EXTREMELY fascinated by how modern microprocessors are built, Photolithography uses giant EUV (Extreme Ultraviolet) machines to etch billions of microscopic transistors onto a single silicon wafer using light waves. It is just mind-boggling how precision engineering at the nanometer scale makes all of our modern computing power possible. Without photolithography, we literally wouldn't have the powerful computers, smartphones, and other electronic devices that we rely on today. It is truly a remarkable technology that massively revolutionized the way we liveour lives, just imagine how much of a difference it made in the world, and how much more it will continue to shape our future."
+                                         data-video="https://www.youtube.com/embed/dX9CGRZwD-w">
+                                        <img src="images/profile/favtech/chip_icon.png" alt="chip icon" class="tech-icon">
+                                        <div class="tech-info">
+                                            <span class="tech-name">PhotoLithography</span>
+                                            <span class="tech-desc">Nanometer-Scale of manufacturing technology</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- card 3: internet -->
+                                    <div class="tech-card internet" 
+                                         data-title="The Internet" 
+                                         data-desc="Wanna know why? I find the Internet absolutely amazing because it connects billions of people and devices across the entire world. It all works through a huge network of servers, routers, cables, and communication protocols that send information from one place to another, usually in just milliseconds. I find it fascinating how a simple search, message, or video can be broken into tiny packets, sent through different paths, and reconstructed perfectly at the destination. What really blows my mind is how the Internet grew from a research project into the global system we use every day for learning, communication, entertainment, and innovation. It is incredible to think that the information, websites, and services we access today can reach almost anyone in the world in seconds. Just imagine how much the Internet will continue to evolve and reshape the future."
+                                         data-video="https://www.youtube.com/embed/7_LPdttKXPc">
+                                        <img src="images/profile/favtech/internet_icon.png" alt="internet icon" class="tech-icon">
+                                        <div class="tech-info">
+                                            <span class="tech-name">The Internet</span>
+                                            <span class="tech-desc">Global Networks & Connectivity</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- / tools list -->
+                            <div class="profile-sub-section">
+                                <h3>TOOLS & PROGRAMS</h3>
+                                <div class="tool-grid">
+                                    <div class="tool-card tool-card-featured">
+                                        <img src="images/profile/tools/vs-code.png" alt="VS Code icon" class="tool-icon">
+                                        <div class="tool-info">
+                                            <span class="tool-name">VS CODE</span>
+                                            <span class="tool-desc">Web Development, Layout, and Design</span>
+                                        </div>
+                                    </div>
+                                    <div class="tool-card">
+                                        <img src="images/profile/tools/github.png" alt="GitHub icon" class="tool-icon">
+                                        <div class="tool-info">
+                                            <span class="tool-name">GITHUB</span>
+                                            <span class="tool-desc">Version Control and Project Hosting</span>
+                                        </div>
+                                    </div>
+                                    <div class="tool-card">
+                                        <img src="images/profile/tools/after-effects.png" alt="After Effects icon" class="tool-icon">
+                                        <div class="tool-info">
+                                            <span class="tool-name">AFTER EFFECTS</span>
+                                            <span class="tool-desc">Motion Graphics and Visual Effects</span>
+                                        </div>
+                                    </div>
+                                    <div class="tool-card">
+                                        <img src="images/profile/tools/davinci-resolve.png" alt="DaVinci Resolve icon" class="tool-icon">
+                                        <div class="tool-info">
+                                            <span class="tool-name">DAVINCI RESOLVE</span>
+                                            <span class="tool-desc">Video Editing and Color Grading</span>
+                                        </div>
+                                    </div>
+                                    <div class="tool-card">
+                                        <img src="images/profile/tools/alight-motion.png" alt="Alight Motion icon" class="tool-icon">
+                                        <div class="tool-info">
+                                            <span class="tool-name">ALIGHT MOTION</span>
+                                            <span class="tool-desc">Mobile Animation and Video Editing</span>
+                                        </div>
+                                    </div>
+
+                                    <!-- blank tool card -->
+                                    <!-- <div class="tool-card tool-placeholder" aria-label="Empty tool slot">
+                                        <span class="tool-add-icon">+</span>
+                                        <div class="tool-info">
+                                            <span class="tool-name">ADD PROGRAM</span>
+                                            <span class="tool-desc">App description</span>
+                                        </div>
+                                    </div>  -->
+                                </div>
                             </div>
 
                             <!-- power / status stat bars -->
@@ -131,81 +241,6 @@
                                 </div>
                             </div>
 
-                            <!-- favorite technologies section -->
-                            <div class="profile-sub-section">
-                                <h3>FAVORITE TECHNOLOGIES</h3>
-                                <div class="tech-grid">
-                                    
-                                    <!-- card 1: wireless tech -->
-                                    <div class="tech-card wireless" 
-                                         data-title="Wireless Technologies" 
-                                         data-desc="Wanna know why? I find it very interesting how wireless technologies work, apparently it all started with the invention of the radio, which over time evolved into the modern wireless communication we have today. I find it fascinating that wireless communication had gotten so advanced that we can move around large amounts of data over the air without any physical connection. Dont get me started with latency aswell, it is just almost impossible to believe how we can send data over the air and have it arrive at its destination in a matter of milliseconds. It really is an amazing technology, as incredible people continue to improve wireless technologies, imagine what it will be like in the future.."
-                                         data-video=https://www.youtube.com/embed/kxLcwIMYmr0&t-R">
-                                        <img src="images/wifi_icon.png" alt="wifi icon" class="tech-icon">
-                                        <div class="tech-info">
-                                            <span class="tech-name">Wireless Technologies</span>
-                                            <span class="tech-desc">Signals, Wi-Fi & Protocols</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <!-- card 2: chip fabrication / lithography -->
-                                    <div class="tech-card chip" 
-                                         data-title="Silicon Chip Fabrication & Lithography" 
-                                         data-desc="To give ya some insight into this fascinating topic.. Photolithography is the process of creating patterns on a silicon wafer using light only done by semiconductor manufacturers with a really sophisticated machine that does all of this complicated process. I am EXTREMELY fascinated by how modern microprocessors are built, Photolithography uses giant EUV (Extreme Ultraviolet) machines to etch billions of microscopic transistors onto a single silicon wafer using light waves. It is just mind-boggling how precision engineering at the nanometer scale makes all of our modern computing power possible. Without photolithography, we literally wouldn't have the powerful computers, smartphones, and other electronic devices that we rely on today. It is truly a remarkable technology that massively revolutionized the way we liveour lives, just imagine how much of a difference it made in the world, and how much more it will continue to shape our future."
-                                         data-video="https://www.youtube.com/embed/dX9CGRZwD-w">
-                                        <img src="images/chip_icon.png" alt="chip icon" class="tech-icon">
-                                        <div class="tech-info">
-                                            <span class="tech-name">PhotoLithography</span>
-                                            <span class="tech-desc">Nanometer-Scale of manufacturing technology</span>
-                                        </div>
-                                    </div>
-
-                                    <!-- card 3: javascript -->
-                                    <div class="tech-card js" 
-                                         data-title="Vanilla JavaScript Logic" 
-                                         data-desc="Building interactive web applications, handling dynamic DOM manipulation, custom event listeners, and smooth state-based transition animations."
-                                         data-video="https://www.youtube.com/embed/W6NZfCO5SIk">
-                                        <span class="tech-icon">JS</span>
-                                        <div class="tech-info">
-                                            <span class="tech-name">Vanilla JavaScript</span>
-                                            <span class="tech-desc">DOM Events & UI Logic</span>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                            <!-- hobbies & interest tags -->
-                            <div class="profile-sub-section">
-                                <h3>HOBBIES & PASSIONS</h3>
-                                <div class="skill-tags">
-                                    <span class="skill-badge hobby-badge">Web Development</span>
-                                    <span class="skill-badge hobby-badge">Web Designing</span>
-                                    <span class="skill-badge hobby-badge">Competitive Gaming</span>
-                                    <span class="skill-badge hobby-badge">Minecraft Server Management</span>
-                                    <span class="skill-badge hobby-badge">Hardware Optimizations</span>
-                                    <span class="skill-badge hobby-badge">UI/UX design Layouts</span>
-                                </div>
-                            </div>
-
-                            <!-- special moves / tools list -->
-                            <div class="profile-sub-section">
-                                <h3>SPECIAL MOVES (TOOLS)</h3>
-                                <div class="t8-special-moves">
-                                    <div class="move-item">
-                                        <span class="move-command">f, f + 1</span>
-                                        <span class="move-name">VS Code Rapid Formatting</span>
-                                    </div>
-                                    <div class="move-item">
-                                        <span class="move-command">d/f + 2</span>
-                                        <span class="move-name">Flexbox Axis Alignment</span>
-                                    </div>
-                                    <div class="move-item">
-                                        <span class="move-command">b + 3, 4</span>
-                                        <span class="move-name">Keydown Event Handlers</span>
-                                    </div>
-                                </div>
-                            </div>
 
                         </div>
                     </div>
@@ -218,41 +253,161 @@
                         
                         <div class="fighter-card">
                             <div class="card-tag">LAB 01</div>
-                            <div class="card-preview">NAVBAR ARENA</div>
+                            <div class="card-preview">CSS BACKGROUND</div>
                             <div class="card-info">
-                                <h3>NAVIGATION BARS</h3>
-                                <p>Sticky glassmorphism & responsive hamburger nav architecture.</p>
-                                <a href="#" class="select-btn">INSPECT CODE</a>
+                                <h3>CSS BACKGROUND</h3>
+                                <p>Background colors, images, sizing, and layered profile styling.</p>
+                                <a href="../CSS_Background_Activity/Ramo_Jeric_CSSBackground/profile.html" class="select-btn">OPEN</a>
                             </div>
                         </div>
 
                         <div class="fighter-card">
                             <div class="card-tag">LAB 02</div>
-                            <div class="card-preview">LAYOUT ZONE</div>
+                            <div class="card-preview">CSS BORDER</div>
                             <div class="card-info">
-                                <h3>CSS POSITIONING</h3>
-                                <p>Mastery of flexbox, absolute positioning, z-index overlays.</p>
-                                <a href="#" class="select-btn">INSPECT CODE</a>
+                                <h3>CSS BORDER</h3>
+                                <p>Border styles, widths, colors, radii, and visual edge effects.</p>
+                                <a href="../CSS_Border_Activity/index.html" class="select-btn">OPEN</a>
                             </div>
                         </div>
 
                         <div class="fighter-card">
                             <div class="card-tag">LAB 03</div>
-                            <div class="card-preview">SELECTOR STAGE</div>
+                            <div class="card-preview">CSS FLEXBOX</div>
                             <div class="card-info">
-                                <h3>COMBINATORS LAB</h3>
-                                <p>Targeted styling using pseudo-classes & child selectors.</p>
-                                <a href="#" class="select-btn">INSPECT CODE</a>
+                                <h3>CSS FLEXBOX</h3>
+                                <p>Flexible layouts, alignment, spacing, and responsive containers.</p>
+                                <a href="../CSS_Flexbox_Activity/index.html" class="select-btn">OPEN</a>
                             </div>
                         </div>
 
                         <div class="fighter-card">
                             <div class="card-tag">LAB 04</div>
-                            <div class="card-preview">SPRITE DOJO</div>
+                            <div class="card-preview">CSS GRADIENTS</div>
                             <div class="card-info">
-                                <h3>GALLERY & SPRITES</h3>
-                                <p>Responsive photo grid layout with CSS background sprites.</p>
-                                <a href="#" class="select-btn">INSPECT CODE</a>
+                                <h3>CSS GRADIENTS</h3>
+                                <p>Linear and radial gradients for modern layered backgrounds.</p>
+                                <a href="../CSS_Gradients_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 05</div>
+                            <div class="card-preview">CSS GRID</div>
+                            <div class="card-info">
+                                <h3>CSS GRID</h3>
+                                <p>Two-dimensional layouts using rows, columns, and grid areas.</p>
+                                <a href="../CSS_Grid_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 06</div>
+                            <div class="card-preview">CSS IMAGE LAB</div>
+                            <div class="card-info">
+                                <h3>CSS IMAGE LAB</h3>
+                                <p>Image sizing, object fit, borders, and presentation techniques.</p>
+                                <a href="../CSS_Image_Lab_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 07</div>
+                            <div class="card-preview">CSS LINKS</div>
+                            <div class="card-info">
+                                <h3>CSS LINKS</h3>
+                                <p>Link states and interactive navigation styling with pseudo-classes.</p>
+                                <a href="../CSS_Links_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 08</div>
+                            <div class="card-preview">CSS LISTS</div>
+                            <div class="card-info">
+                                <h3>CSS LISTS</h3>
+                                <p>Custom list markers, spacing, and structured content layouts.</p>
+                                <a href="../CSS_Lists_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 09</div>
+                            <div class="card-preview">CSS MARGIN</div>
+                            <div class="card-info">
+                                <h3>CSS MARGIN</h3>
+                                <p>Spacing elements and controlling margin behavior in layouts.</p>
+                                <a href="../CSS_Margin_ Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 10</div>
+                            <div class="card-preview">CSS NAVBAR</div>
+                            <div class="card-info">
+                                <h3>NAVIGATION BAR</h3>
+                                <p>Responsive navigation structures and polished menu interactions.</p>
+                                <a href="../CSS_Navbar_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 11</div>
+                            <div class="card-preview">OFFSETS & FLOAT</div>
+                            <div class="card-info">
+                                <h3>CSS OFFSETS & FLOAT</h3>
+                                <p>Element positioning, offsets, and traditional float layouts.</p>
+                                <a href="../CSS_Offsets_Float_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 12</div>
+                            <div class="card-preview">CSS PADDING</div>
+                            <div class="card-info">
+                                <h3>CSS PADDING</h3>
+                                <p>Inner spacing, box sizing, and component content alignment.</p>
+                                <a href="../CSS_Padding_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 13</div>
+                            <div class="card-preview">CSS POSITIONING</div>
+                            <div class="card-info">
+                                <h3>CSS POSITIONING</h3>
+                                <p>Static, relative, absolute, fixed, and sticky positioning.</p>
+                                <a href="../CSS_Possitioning_Lab/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 14</div>
+                            <div class="card-preview">CSS SELECTOR LAB</div>
+                            <div class="card-info">
+                                <h3>CSS SELECTORS</h3>
+                                <p>Type, class, ID, combinator, and pseudo-class targeting.</p>
+                                <a href="../CSS_Selector_Lab/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 15</div>
+                            <div class="card-preview">CSS TEXT</div>
+                            <div class="card-info">
+                                <h3>CSS TEXT</h3>
+                                <p>Typography, text alignment, spacing, shadows, and decoration.</p>
+                                <a href="../CSS_Text_Activity/index.html" class="select-btn">OPEN</a>
+                            </div>
+                        </div>
+
+                        <div class="fighter-card">
+                            <div class="card-tag">LAB 16</div>
+                            <div class="card-preview">RESPONSIVE IMAGE GALERY</div>
+                            <div class="card-info">
+                                <h3>RESPONSIVE IMAGE GALERY</h3>
+                                <p>Adaptive image galleries for desktop and mobile screen sizes.</p>
+                                <a href="../Responsive_Image_Galery/index.html" class="select-btn">OPEN</a>
                             </div>
                         </div>
 
