@@ -151,7 +151,17 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .header-top-row {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-left: auto; margin-right: auto;
+  }
 }
 
 .main-menu-tab {
@@ -184,22 +194,133 @@ body {
 }
 
 .tekken-player-tag {
-    background: transparent;
+    background: #ffffff57;
     border: none;
-    padding: 0;
+    padding: 10px;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 1.5px;
-    color: #b2b2c7;
+    color: #511c55;
+    border-radius: 3px;
 }
 
 .tekken-top-nav {
     display: flex;
     gap: 10px;
     align-items: center;
-    padding-top: 10px;
+    margin-top: 10px;
 }
 
+@keyframes navItemSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes navItemSlideBack {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .tekken-top-nav {
+    justify-content: center;
+  }
+}
+
+.tekken-top-nav.nav-animate-in > *,
+.tekken-top-nav.nav-animate-back > * {
+  animation-duration: 0.35s;
+  animation-timing-function: ease;
+  animation-fill-mode: both;
+}
+
+.tekken-top-nav.nav-animate-in > * {
+  animation-name: navItemSlideIn;
+}
+
+.tekken-top-nav.nav-animate-back > * {
+  animation-name: navItemSlideBack;
+}
+
+.tekken-top-nav.nav-animate-in > :nth-child(2),
+.tekken-top-nav.nav-animate-back > :nth-child(2) { animation-delay: 0.06s; }
+.tekken-top-nav.nav-animate-in > :nth-child(3),
+.tekken-top-nav.nav-animate-back > :nth-child(3) { animation-delay: 0.12s; }
+.tekken-top-nav.nav-animate-in > :nth-child(4),
+.tekken-top-nav.nav-animate-back > :nth-child(4) { animation-delay: 0.18s; }
+.tekken-top-nav.nav-animate-in > :nth-child(5),
+.tekken-top-nav.nav-animate-back > :nth-child(5) { animation-delay: 0.24s; }
+.tekken-top-nav.nav-animate-in > :nth-child(6),
+.tekken-top-nav.nav-animate-back > :nth-child(6) { animation-delay: 0.30s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tekken-top-nav.nav-animate-in > *,
+  .tekken-top-nav.nav-animate-back > * {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .tekken-top-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2px;
+    align-items: center;
+  }
+
+  /* Row 1: Q on top-left, E on top-right */
+  .tekken-top-nav .ps-button:first-of-type {
+    grid-row: 1;
+    grid-column: 1;
+    justify-self: center;
+    margin-right: 0; /* resets any earlier margin-right: 100% */
+  }
+
+  .tekken-top-nav .ps-button:last-of-type {
+    grid-row: 1;
+    grid-column: 2;
+    justify-self: center;
+    margin-right: 0; /* resets any earlier margin-right: 100% */
+  }
+
+  /* Rows 2 & 3: 2x2 grid of tabs */
+  .tekken-top-nav .nav-tab {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .tekken-top-nav .nav-tab:nth-of-type(1) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+
+  .tekken-top-nav .nav-tab:nth-of-type(2) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+
+  .tekken-top-nav .nav-tab:nth-of-type(3) {
+    grid-row: 3;
+    grid-column: 1;
+  }
+
+  .tekken-top-nav .nav-tab:nth-of-type(4) {
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
 .nav-tab {
     background: transparent;
     color: #9a9ab0;
@@ -303,7 +424,7 @@ body {
     max-width: 1200px;
     max-height: fit-content;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -311,12 +432,14 @@ body {
 .pages-track {
     display: flex;
     width: 400%;
+    align-items: flex-start;
     transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .tekken-page {
     width: 25%;
-    flex-shrink: 0;
+    min-width: 0;
+    flex: 0 0 25%;
     box-sizing: border-box;
     background: rgba(15, 15, 20, 0.95);
     border-left: 3px solid #ff003c;
@@ -668,6 +791,93 @@ body {
     letter-spacing: 1px;
 }
 
+body.activity-modal-open {
+    overflow: hidden;
+}
+
+.activity-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 21000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5vh 2.5vw;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.82);
+}
+
+.activity-modal-content {
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    height: 95vh;
+    overflow: hidden;
+    border: 2px solid #ff003c;
+    background: rgba(12, 12, 18, 0.98);
+    box-shadow: 0 0 28px rgba(255, 0, 60, 0.28);
+}
+
+.activity-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 56px;
+    padding: 8px 14px;
+    border-bottom: 1px solid rgba(255, 0, 60, 0.5);
+}
+
+.activity-back-button {
+    flex: 0 0 auto;
+    padding: 9px 13px;
+    border: 1px solid #ff003c;
+    background: #17121a;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.75rem;
+    cursor: pointer;
+}
+
+.activity-back-button:hover {
+    background: #ff003c;
+}
+
+.activity-modal-header h2 {
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+}
+
+.activity-modal-content iframe {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    border: 0;
+    background: #ffffff;
+}
+
+@media (max-width: 600px) {
+    .activity-modal {
+        padding: 0;
+    }
+
+    .activity-modal-content {
+        width: 100vw;
+        height: 100vh;
+        border-width: 1px;
+    }
+
+    .activity-modal-header {
+        min-height: 50px;
+        padding: 7px 10px;
+    }
+
+    .activity-modal-header h2 {
+        font-size: 0.82rem;
+    }
+}
+
 /* --- HOBBIES BADGES --- */
 .skill-badge.hobby-badge {
     background: #111420;
@@ -894,7 +1104,7 @@ body {
     color: #7a7a8e;
     font-size: 0.85rem;
     margin: 10px 0 15px 0;
-    height: 40px;
+    min-height: 40px;
 }
 
 .select-btn {
@@ -935,4 +1145,353 @@ body {
     );
     border-left: 3px solid #ff003c;
     border-right: 3px solid #ff003c;
+}
+
+/* Responsive layouts: widescreen, desktop, laptop, tablet, and mobile */
+@media (min-width: 1601px) {
+    .pages-viewport {
+        width: 96%;
+        max-width: 1700px;
+    }
+
+    .tekken-page {
+        padding: 38px;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .tekken-character-select-layout {
+        grid-template-columns: 320px minmax(0, 1fr);
+        gap: 42px;
+    }
+
+    .fighter-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1600px) {
+    .pages-viewport {
+        width: 94%;
+        max-width: 1440px;
+    }
+
+    .tekken-page {
+        padding: 30px;
+    }
+
+    .tekken-character-select-layout {
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+    .pages-viewport {
+        width: 96%;
+        max-width: 1120px;
+    }
+
+    .tekken-page {
+        padding: 24px;
+    }
+
+    .section-title {
+        font-size: 2.15rem;
+    }
+
+    .tekken-character-select-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .t8-char-name {
+        font-size: 2.7rem;
+        letter-spacing: 3px;
+    }
+
+    .t8-stat-text {
+        font-size: 0.82rem;
+        overflow-wrap: anywhere;
+    }
+
+    .fighter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .card-info {
+        padding: 12px;
+    }
+
+    .card-info p {
+        height: auto;
+    }
+
+    .tekken-footer {
+        padding: 10px 20px;
+    }
+
+    .footer-content {
+        font-size: 0.62rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .tekken-header {
+        padding: 12px 20px;
+    }
+
+    .pages-viewport {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tekken-page {
+        min-height: 0;
+        padding: 22px;
+    }
+
+    .section-title {
+        font-size: 1.9rem;
+        letter-spacing: 1px;
+    }
+
+    .tekken-character-select-layout {
+        grid-template-columns: minmax(170px, 0.8fr) minmax(0, 1.2fr);
+        gap: 16px;
+    }
+
+    .t8-char-name {
+        font-size: 2.3rem;
+        letter-spacing: 2px;
+    }
+
+    .t8-stat-text {
+        font-size: 0.78rem;
+        overflow-wrap: anywhere;
+    }
+
+    .profile-sub-section {
+        padding: 14px;
+    }
+
+    .fighter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .card-preview {
+        font-size: 0.82rem;
+        letter-spacing: 1px;
+    }
+
+    .card-info {
+        padding: 12px;
+    }
+
+    .card-info h3 {
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+    .card-info p {
+        height: auto;
+        min-height: 0;
+        line-height: 1.45;
+    }
+
+    .tekken-footer {
+        position: relative;
+        padding: 10px 16px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px 18px;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    .splash-title {
+        font-size: clamp(2rem, 10vw, 3.2rem);
+    }
+
+    .splash-prompt {
+        padding: 0 16px;
+        letter-spacing: 2px;
+        text-align: center;
+    }
+
+    .splash-credits {
+        right: 16px;
+        bottom: 16px;
+        left: 16px;
+        font-size: 0.58rem;
+    }
+
+    .tekken-header {
+        padding: 10px 12px;
+    }
+
+    .tekken-top-nav {
+        width: 100%;
+        max-width: 360px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .nav-tab {
+        padding: 8px 6px;
+        font-size: 0.74rem;
+        letter-spacing: 0.5px;
+    }
+
+    .pages-viewport {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tekken-page {
+        min-height: 0;
+        padding: 16px 14px;
+        border-width: 2px;
+    }
+
+    .section-title {
+        font-size: clamp(1.35rem, 6.8vw, 1.8rem);
+        letter-spacing: 1px;
+        padding-bottom: 8px;
+    }
+
+    .tekken-character-select-layout {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .t8-character-info {
+        align-items: center;
+    }
+
+    .t8-avatar-container {
+        width: min(68%, 210px);
+        max-height: 210px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .t8-char-name {
+        font-size: 2.4rem;
+        letter-spacing: 3px;
+    }
+
+    .t8-stat-block {
+        width: 100%;
+        max-width: 340px;
+        align-items: flex-start;
+    }
+
+    .t8-stat-text {
+        font-size: 0.76rem;
+        overflow-wrap: anywhere;
+    }
+
+    .t8-bar-label {
+        gap: 10px;
+        font-size: 0.62rem;
+    }
+
+    .t8-bio-details {
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .profile-sub-section {
+        padding: 13px;
+    }
+
+    .profile-sub-section h3 {
+        font-size: 0.95rem;
+    }
+
+    .tech-grid,
+    .tool-grid,
+    .fighter-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .tech-card,
+    .tool-card,
+    .fighter-card {
+        min-width: 0;
+    }
+
+    .card-preview {
+        height: 92px;
+        padding: 0 8px;
+        font-size: 0.74rem;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .card-info {
+        padding: 12px;
+    }
+
+    .card-info h3 {
+        font-size: 0.95rem;
+        overflow-wrap: anywhere;
+    }
+
+    .card-info p {
+        height: auto;
+        min-height: 0;
+        line-height: 1.45;
+    }
+
+    .tekken-footer {
+        position: relative;
+        padding: 10px 14px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+        font-size: 0.56rem;
+        letter-spacing: 0.8px;
+        text-align: center;
+    }
+
+    .footer-copy {
+        font-size: 0.58rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .modal-content.wide-modal {
+        width: 94%;
+        max-height: 92vh;
+        padding: 16px;
+        overflow-y: auto;
+    }
+
+    .tekken-modal-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .modal-text-side {
+        max-height: 180px;
+    }
 }
