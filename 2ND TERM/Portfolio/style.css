@@ -194,13 +194,13 @@ body {
 }
 
 .tekken-player-tag {
-    background: #ffffff57;
-    border: none;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px rgba(255,255,255) solid;
     padding: 10px;
     font-family: 'Orbitron', sans-serif;
     font-size: 0.75rem;
     letter-spacing: 1.5px;
-    color: #511c55;
+    color: #ffffff;
     border-radius: 3px;
 }
 
