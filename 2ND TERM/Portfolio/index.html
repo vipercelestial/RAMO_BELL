@@ -488,6 +488,7 @@
         const navTabs = document.querySelectorAll('.tekken-top-nav .nav-tab[data-index]');
         const topNav = document.querySelector('.tekken-top-nav');
         const pagesTrack = document.getElementById('pagesTrack');
+        const activityCards = document.querySelectorAll('#activities .fighter-card');
         const activityModal = document.getElementById('activityModal');
         const activityModalTitle = document.getElementById('activityModalTitle');
         const activityBackButton = document.getElementById('activityBackButton');
@@ -530,6 +531,39 @@
             
             const translateXValue = index * 25;
             pagesTrack.style.transform = `translateX(-${translateXValue}%)`;
+
+            if (index === 1 && !prefersReducedMotion.matches) {
+                activityCards.forEach(card => card.classList.remove('is-entering'));
+                void document.getElementById('activities').offsetWidth;
+
+                activityCards.forEach((card, cardIndex) => {
+                    card.classList.add('is-entering');
+                    card.addEventListener('animationend', event => {
+                        if (event.animationName === 'activityCardSweep') {
+                            card.classList.remove('is-entering');
+                        }
+                    }, { once: true });
+
+                    card.animate(
+                        [
+                            {
+                                opacity: 0,
+                                transform: 'translateX(-32px) scale(0.97)'
+                            },
+                            {
+                                opacity: 1,
+                                transform: 'translateX(0) scale(1)'
+                            }
+                        ],
+                        {
+                            duration: 560,
+                            delay: cardIndex * 65,
+                            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+                            fill: 'backwards'
+                        }
+                    );
+                });
+            }
         }
 
         function closeActivityModal() {
